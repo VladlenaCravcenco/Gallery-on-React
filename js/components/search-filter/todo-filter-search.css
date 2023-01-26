@@ -1,0 +1,17 @@
+.btn{
+    color: #567;
+    border:  1px solid;
+}
+
+.btn-group{
+   
+    float: right;
+    
+}
+input{
+    padding: 4px;
+border-radius: 7px;
+border: 1px solid #567;
+
+}
+
