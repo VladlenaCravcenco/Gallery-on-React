@@ -14,4 +14,9 @@
     border-radius: 10px;
     border: 1px solid #5673;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.d-flex {
+    justify-content: space-between;
 }
