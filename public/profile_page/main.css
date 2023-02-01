@@ -1,0 +1,65 @@
+body{
+    margin: 0px;
+    font-family: 'Bodoni Moda', serif;
+    font-family: 'Quicksand', sans-serif;
+    
+    }
+    /*_____________________________*/
+    .header {
+        background: #fff;
+        height: 100px;
+    }
+    
+    .header-line{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .head-logo{
+        text-decoration: none;
+        color: black;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 30px;
+        font-weight: 400;
+    
+    }
+    
+    .container {
+        margin: 30px 160px
+    }
+    
+    
+    .nav{
+        width: calc(25%);
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    
+    
+    .log-in a{
+        
+        color: #fff;
+        width: 140px;
+        height: 40px;
+     background-image: url(resurses/btn-sign.png);
+     font-family: 'Quicksand', sans-serif;
+     text-decoration: none;
+     padding: 8px 43px;
+     transition: 0.2s linear;
+     border-radius: 35px 0 35px 0;
+    
+    
+    }
+    
+    .log-in a:hover{
+        background-color: #DDA7AB;
+        border-radius: 35px 0 35px 0;
+        width: 140px;
+        height: 40px;
+        transition: 0.2s linear;
+    }
