@@ -4,6 +4,7 @@ import shop from "../../resources/assets/shop.png"
 import favorites from "../../resources/assets/favorites.png"
 import login from "../../resources/assets/login.png"
 
+
 import './app.css';
 
 export default class App extends Component {
