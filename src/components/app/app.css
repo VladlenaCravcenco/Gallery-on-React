@@ -1,3 +1,5 @@
+
+
 .main-container{
     max-width: 600px;
     margin: auto;
@@ -116,7 +118,7 @@ body {
 
 
 .bg-slider {
-    background: url(../app/app.js) no-repeat;
+    background: url(../../resources/bg/bg4.jpg) no-repeat;
     height: 550px;
     width: 100vw;
     background-size: cover;

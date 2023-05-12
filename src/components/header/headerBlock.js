@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SVGsearch from '../../resources/svg/search.svg';
+
 
 class HeaderBlock extends Component { //command +D
 
@@ -9,13 +11,13 @@ class HeaderBlock extends Component { //command +D
                 <div className="header-line">
                     <div className="header-logo">
                         <a href="#" class="head-logo">
-                            GALLERY SENTIMENT123
+                            GALLERY SENTIMENT
                         </a>
                     </div>
                     <div className="navbar">
                         <div className="nav">
                             <a href="#">
-                                despre noi
+                                despre noi   
                             </a>
                             <a href="#">
                                 evenimente
@@ -34,7 +36,7 @@ class HeaderBlock extends Component { //command +D
                             </a>
 
                         </div>
-                        <button><img src="../resurses/icons/search.svg" alt="" /></button>
+                        <button><img src={SVGsearch} alt="" /></button>
 
                         <div className="log-in">
                             <a href="#">
