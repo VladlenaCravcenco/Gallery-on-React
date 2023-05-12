@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import HeaderBlock from '../header/headerBlock.js';
-import LoginForm from '../loginform/loginform.js';
+import NavSetings from '../navsetings/Navsettings.js'; 
+import EditProfile from '../navsetings/editprofile.js';
 
 import FooterBlock from '../footer/footer.js';
 
-
-export default class Login extends Component {
+export default class Setings extends Component {
 
     render() {
         return (
             <>
             <HeaderBlock/>
-            <LoginForm/>
+            <NavSetings/>
+            <EditProfile/>
             <FooterBlock/>
             </>
         );

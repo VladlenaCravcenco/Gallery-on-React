@@ -13,30 +13,31 @@ class Myroomheader extends Component {
             <div className="header-profile">
                 <div className="container-head-prof-room">
                     <div className="creative-header-room">
-
-                        <div className="photo-profile-room">
+                        <div className='photo-name'>
+                            <div className="photo-profile-room">
+                            </div>
+                            <div className="painter-name-room">
+                                <h3>CRAVCENCO VLADLENA</h3>
+                            </div>
                         </div>
-                        <div className="painter-name-room">
-                            <h3>CRAVCENCO VLADLENA</h3>
+                        <div className='user-folow-socials'>
+                            <div className="user-name-room">
+                                @cravcencoART
+                            </div>
+                            <div className="followers-room">
+                                următori 123
+                            </div>
+                            <div className="socials-room">
+                                <a href="#"><img src={Youtube} alt="" /></a>
+                                <a href="#"><img src={Telegram} alt="" /></a>
+                                <a href="#"><img src={Instaw} alt="" /></a>
+                            </div>
                         </div>
-                        <div className="user-name-room">
-                            <h4>@cravcencoART</h4>
-                        </div>
-                        <div className="followers-room">
-                            <h5>următori 123</h5>
-                        </div>
-                        <div className="socials-room">
-                            <a href="#"><img src={Youtube} alt=""/></a>
-                            <a href="#"><img src={Telegram} alt=""/></a>
-                            <a href="#"><img src={Instaw} alt=""/></a>
-                        </div>
-
-
                         <div className="button_setari">
                             setări
                         </div>
-
                     </div>
+
                 </div>
             </div>
         );

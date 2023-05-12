@@ -13,12 +13,18 @@ import heartcolor from '../../resources/svg/heart-color.svg';
 
 class CardsBlock extends Component {
 
+
+
     render() {
+
+
         return (
             <div class="cards">
                 <div className="container">
                     <div className="title-cards">
-                        <h1>Artiști noi</h1>
+                        <h1 onClick={ ()=> console.log('done: ') }
+                        
+                        >Artiști noi</h1>
                     </div>
 
                     <div className="popular-cards">
@@ -32,7 +38,7 @@ class CardsBlock extends Component {
                             </div>
                             <div className="button-room">
                                 <div className="art-descrip">
-                                    <a >Bobbi Brown</a>
+                                    <a href='random' >Bobbi Brown</a>
                                     <h4 >Chisinau, 2009</h4>
                                 </div>
                                 <button className="right-arrow">
@@ -50,7 +56,7 @@ class CardsBlock extends Component {
                             </div>
                             <div className="button-room">
                                 <div className="art-descrip">
-                                    <a href="#">Kate Frost</a>
+                                    <a href="random">Kate Frost</a>
                                     <h4 >Chisinau, 2001</h4>
                                 </div>
                                 <button className="right-arrow">
@@ -69,7 +75,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Willie Maye</a>
+                                        <a href="random">Willie Maye</a>
                                         <h4 >Chisinau, 2006</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -88,7 +94,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Justin Bieber</a>
+                                        <a href="random">Justin Bieber</a>
                                         <h4 >Chisinau, 2004</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -107,7 +113,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Ted Mosbi</a>
+                                        <a href="random">Ted Mosbi</a>
                                         <h4 >Chisinau, 2009</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -129,7 +135,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Carolina Herrera</a>
+                                        <a href="random">Carolina Herrera</a>
                                         <h4 >Chisinau, 2000</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -148,7 +154,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Miley Sirus</a>
+                                        <a href="random">Miley Sirus</a>
                                         <h4 >Chisinau, 2010</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -168,7 +174,7 @@ class CardsBlock extends Component {
 
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Sirius Black</a>
+                                        <a href="random">Sirius Black</a>
                                         <h4 >Chisinau, 1994</h4>
                                     </div>
                                     <button className="right-arrow">
@@ -187,7 +193,7 @@ class CardsBlock extends Component {
                                 </div>
                                 <div className="button-room">
                                     <div className="art-descrip">
-                                        <a href="#">Willie Maye</a>
+                                        <a href="random">Willie Maye</a>
                                         <h4 >Chisinau, 2006</h4>
                                     </div>
                                     <button className="right-arrow">

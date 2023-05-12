@@ -8,7 +8,7 @@ import SubscribeBlock from '../form-subsc/subscribeBlock.js';
 
 import FooterBlock from '../footer/footer.js';
 
-export default class mainPage extends Component {
+export default class MainPage extends Component {
 
     render() {
         return (

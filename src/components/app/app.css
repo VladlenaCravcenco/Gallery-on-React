@@ -1,24 +1,25 @@
-
-
-.main-container{
+.main-container {
     max-width: 600px;
     margin: auto;
 }
-.data{
+
+.data {
     color: #5673;
 
 }
-.appBlock{
+
+.appBlock {
     max-width: 500px;
     margin: auto;
     margin-top: 20px;
-    align-items:stretch;
+    align-items: stretch;
     border-radius: 10px;
     border: 1px solid #5673;
     padding: 15px;
     display: flex;
     flex-direction: column;
 }
+
 .d-flex {
     justify-content: space-between;
 }
@@ -1143,19 +1144,19 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-/*__________________________________________*/
+/*___________________LOGIN_______________________*/
 
 .log-container {
     width: 100%;
-    height: 600px;
+    height: 720px;
     margin: 50px 0;
 }
 
 .left-log {
     box-sizing: border-box;
-    width: 500px;
+    width: 400px;
     margin: auto;
-    height: 600px;
+    height: 720px;
     border: 1px solid black;
 
 }
@@ -1175,16 +1176,10 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.form-to-fill form {
-
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
 form .txt-field {
     position: relative;
     border-bottom: 1px solid black;
-    margin: 30px 0;
+    margin: 30px 14px;
 }
 
 .txt-field input {
@@ -1225,7 +1220,8 @@ form .txt-field {
 }
 
 input[type="submit"] {
-    width: 100%;
+    width: 350px;
+    margin: 0 14px;
     height: 50px;
     border: 1px solid black;
     background: none;
@@ -1257,7 +1253,7 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/*  sign up   */
+/* ____________sign up______________   */
 
 .signup_box {
     border: 1px solid #181F22;
@@ -1340,7 +1336,7 @@ input[type="submit"]:hover {
 .variante .google,
 .variante .facebook {
     width: 350px;
-    margin: 10px 25px;
+    margin: 10px 14px;
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
@@ -1353,6 +1349,7 @@ input[type="submit"]:hover {
 .variante .google img,
 .variante .facebook img {
     width: 16px;
+    height: 16px;
 }
 
 .link_login {
@@ -1370,15 +1367,27 @@ input[type="submit"]:hover {
 }
 
 
-/*   my room   */
+/*   _______________my room____________   */
 
 .container-head-prof-room {
     width: 100vw;
     margin-bottom: 50px;
     background: rgb(0, 31, 29);
     height: 350px;
-    display: flex;
+
     justify-content: space-around;
+}
+.creative-header-room {
+    width: 100vw;
+    text-align: center;
+    height: 250px;
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+.photo-name {
+    display: flex;
+    margin-bottom: 15px;
 }
 
 .photo-profile-room {
@@ -1391,23 +1400,39 @@ input[type="submit"]:hover {
     float: left;
 }
 
+.user-folow-socials {
+
+width: 150px;
+    color: #BFBFBF;
+
+    align-items: center;
+}
+
 .painter-name-room {
     font-family: 'Bodoni Moda', serif;
-    width: 490px;
+    width: 340px;
     font-size: 20px;
     color: #D5D2CC;
+
 }
 
 .user-name-room {
     font-family: 'Quicksand', sans-serif;
-    color: #BFBFBF;
     cursor: pointer;
-    float: left;
+    width: 150px;
+    margin-bottom: 10px;
+}
+.socials-room{
+    width: 150px;
+    margin-top: 10px;
+}
+.socials-room a{
+    margin: 0 3px;
 }
 
 .button_setari {
 
-    margin: auto;
+   
     width: 160px;
     height: 25px;
     border: #D5D2CC solid 1px;
@@ -1416,7 +1441,7 @@ input[type="submit"]:hover {
     font-size: 12px;
     line-height: 24px;
     transition: 0.2s linear;
-    float: right;
+
 }
 
 .button_setari:hover {
@@ -1427,28 +1452,6 @@ input[type="submit"]:hover {
 
 
 
-.followers-room h5 {
-    color: #BFBFBF;
-    float: left;
-}
-
-.creative-header-room {
-    width: 100vw;
-    text-align: center;
-    height: 250px;
-    margin: 50px;
-    box-sizing: border-box;
-}
-
-.creative-header-room .socials-room {
-    float: left;
-}
-
-.creative-header-room .socials-room a {
-    color: #BFBFBF;
-    cursor: pointer;
-}
-
 
 .navbar_adaugari {
     display: flex;
@@ -1457,9 +1460,35 @@ input[type="submit"]:hover {
     border-bottom: 1px linear #181F22
 }
 
-.grid_adaugari {
+/*.grid_adaugari {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
     grid-gap: 30px;
+}*/
+
+
+/*_______________Setings__________________*/
+
+.navbar-setings{
+    width: 100vw;
+    background-color: #BFBFBF;
+    color: #181F22;
+}
+
+.container-nav-setings{
+    width: 1280px;
+    margin: auto;
+}
+
+ul.hr{
+    margin: 0;
+    padding: 4px;
+
+}
+
+ul.hr li{
+display: inline;
+margin-right: 10%;
+padding: 25px;
 }

@@ -40,7 +40,7 @@ export default class SignUp extends Component {
                     
                 </div>
             </div>
-            <div class="right-log">
+            <div className="right-log">
 
             </div>
         </div>
