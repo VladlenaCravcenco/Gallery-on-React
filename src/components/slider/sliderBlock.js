@@ -21,13 +21,13 @@ class SliderBlock extends Component {
         return (
             <div className="slider-conteiner">
 
-{/* 
+ 
                     <div className="bg-slider">
                     </div>
 
                     <div className="slidereveniments">
                         <button className="left-arrow">
-                            <img src={Arrowl} alt="" />
+                            <img src={arrowl} alt="" />
                         </button>
 
                         <div className="eveniments">
@@ -40,11 +40,11 @@ class SliderBlock extends Component {
 
                                 </div>
                                 <div className="photos-evenim">
-                                    <a href="#"><img src={Work4} alt="" /></a>
-                                    <a href="#"><img src={Work5} alt="" /></a>
-                                    <a href="#"><img src={Work6} alt="" /></a>
-                                    <a href="#"><img src={Work7} alt="" /></a>
-                                    <a href="#"><img src={Work8} alt="" /></a>
+                                    <a href="#"><img src={work4} alt="" /></a>
+                                    <a href="#"><img src={work5} alt="" /></a>
+                                    <a href="#"><img src={work6} alt="" /></a>
+                                    <a href="#"><img src={work7} alt="" /></a>
+                                    <a href="#"><img src={work8} alt="" /></a>
 
                                 </div>
                             </div>
@@ -58,11 +58,11 @@ class SliderBlock extends Component {
 
                                 </div>
                                 <div className="photos-evenim">
-                                    <a href="#"><img src={Work9} alt="" /></a>
-                                    <a href="#"><img src={Work10} alt="" /></a>
-                                    <a href="#"><img src={Work11} alt="" /></a>
-                                    <a href="#"><img src={Work8} alt="" /></a>
-                                    <a href="#"><img src={Work7} alt="" /></a>
+                                    <a href="#"><img src={work9} alt="" /></a>
+                                    <a href="#"><img src={work10} alt="" /></a>
+                                    <a href="#"><img src={work11} alt="" /></a>
+                                    <a href="#"><img src={work8} alt="" /></a>
+                                    <a href="#"><img src={work7} alt="" /></a>
 
                                 </div>
                             </div>
@@ -76,20 +76,20 @@ class SliderBlock extends Component {
 
                                 </div>
                                 <div className="photos-evenim">
-                                    <a href="#"><img src={Work1} alt="" /></a>
-                                    <a href="#"><img src={Work2} alt="" /></a>
-                                    <a href="#"><img src={Work3} alt="" /></a>
-                                    <a href="#"><img src={Work4} alt="" /></a>
-                                    <a href="#"><img src={Work5} alt="" /></a>
+                                    <a href="#"><img src={work1} alt="" /></a>
+                                    <a href="#"><img src={work2} alt="" /></a>
+                                    <a href="#"><img src={work4} alt="" /></a>
+                                    <a href="#"><img src={work3} alt="" /></a>
+                                    <a href="#"><img src={work5} alt="" /></a>
 
                                 </div>
                             </div>
                         </div>
 
                         <button className="right-arrow">
-                            <img src={Arrowr} alt="" />
+                            <img src={arrowr} alt="" />
                         </button>
-                    </div> */}
+                    </div> 
 
                 </div>
         );

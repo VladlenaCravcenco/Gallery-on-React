@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
-// import React from 'react';
+
+import mainPage from './mainpage.js';
+import Login from './login.js';
+import MyRoom from './myroom.js';
+import randomProf from './randomprofile.js';
 import SliderBlock from '../slider/sliderBlock.js';
-import OpereBlock from '../opere/opereBlock.js';
-import SubscribeBlock from '../form-subsc/subscribeBlock.js';
-import CardsBlock from '../cards/cards.js';
 import RandomProfileBlock from '../RandomProfile/RandomProfileBlock.js';
-import Myroomheader from '../Myroomheader/Myroomheader.js';
 import MenuAdd from '../Myroomheader/menu-add.js';
 
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-export default class App extends Component { 
+export default class App extends Component {
 
     render() {
         return (
             <>
-          <BrowserRouter>
-                
-                <Routes>
-                <Route path='/'Component={Myroomheader}/>
-                <Route path='/events'Component={SliderBlock}/>
-                <Route path='/myroom'Component={RandomProfileBlock}/>
-                <Route path='/myroom'Component={MenuAdd}/>
-                {/* <CardsBlock />
-                <OpereBlock />
-                <SubscribeBlock /> */}
+                <BrowserRouter>
 
-</Routes>
-                
+                    <Routes>
+                        <Route path='/mainpage' Component={mainPage} />
+                        <Route path='/login' Component={Login} />
+                        <Route path='/myroom' Component={MyRoom} />
+                        <Route path='/random' Component={randomProf} />
 
-                </BrowserRouter> 
-               
+                    </Routes>
+
+
+                </BrowserRouter>
+
             </>
         )
     }

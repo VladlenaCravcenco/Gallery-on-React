@@ -7,7 +7,7 @@ import instaw from '../../resources/svg/instagram-white.svg';
 import eyepassword from '../../resources/svg/eye-password-show.svg';
 import work7 from '../../resources/works/work7.jpg';
 import arrowl from '../../resources/svg/arrow-l.svg';
-import arowr from '../../resources/svg/arrow-r.svg';
+import arrowr from '../../resources/svg/arrow-r.svg';
 
 
 class RandomProfileBlock extends Component {
@@ -15,7 +15,7 @@ class RandomProfileBlock extends Component {
     render() {
         return (
             <div className="header-profile">
-        {/* <div className="container-head-prof">
+        <div className="container-head-prof">
             <div className="creative-header">
 
                 <div className="photo-profile"> </div>
@@ -32,13 +32,13 @@ class RandomProfileBlock extends Component {
                     <h5>următori 123</h5>
                 </div>
                 <div className="alerta">
-                    <img src={Alarm} alt=""/>
+                    <img src={alarm} alt=""/>
                     creați alertă
                 </div>
                 <div className="socials">
-                    <a href="#"><img src={Youtube} alt=""/></a>
-                    <a href="#"><img src={Telegram} alt=""/></a>
-                    <a href="#"><img src={Instaw} alt=""/></a>
+                    <a href="#"><img src={youtube} alt=""/></a>
+                    <a href="#"><img src={telegram} alt=""/></a>
+                    <a href="#"><img src={instaw} alt=""/></a>
                 </div>
             </div>
             <div className="popular_art">
@@ -53,11 +53,11 @@ class RandomProfileBlock extends Component {
                         €8,000
                     </div>
                     <div className="art-button-view">
-                        <img src={Eyepassword} alt=""/> vedere in
+                        <img src={eyepassword} alt=""/> vedere in
                         camera
                     </div>
                     <div className="arrow-left">
-                        <img src={Arrowl} alt=""/>
+                        <img src={arrowl} alt=""/>
                     </div>
                     <div className="art-descrip">
                         Inspired by the covers of prominent fashion magazines and the rich cultural history of her own
@@ -74,14 +74,14 @@ class RandomProfileBlock extends Component {
                 </div>
                 <div className="art-frame">
                     <div className="art-main">
-                        <img src={Work7} alt=""/>
+                        <img src={work7} alt=""/>
                     </div>
                 </div>
                 <div className="arrow-right">
-                    <img src={Arrowr} alt=""/>
+                    <img src={arrowr} alt=""/>
                 </div>
             </div>
-        </div> */}
+        </div> 
     </div>
         );
     }

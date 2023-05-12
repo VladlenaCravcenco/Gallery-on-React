@@ -12,10 +12,10 @@ class SubscribeBlock extends Component {
 
                             <h2>Înscrieți-vă pentru a colecta artă de la cei mai importanți artiști din Moldova</h2>
                             <div className="subscribe-button">
-                                <button className="btn-conect">
+                                <button className="btn-conect"> {/*login*/}
                                     conectare
                                 </button>
-                                <button className="btn-registr">
+                                <button className="btn-registr"> {/*signup*/}
                                     registrare
                                 </button>
                             </div>

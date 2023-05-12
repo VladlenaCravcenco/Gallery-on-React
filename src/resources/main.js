@@ -10,3 +10,5 @@ rangeInput.forEach(input => {
         progress.getElementsByClassName.left = (minVal / rangeInput[0].max) * 100 + "%";
     });
 });
+
+alert ('ghghgh')
