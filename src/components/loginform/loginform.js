@@ -22,7 +22,7 @@ export default class SignUp extends Component {
                         <label>Parolă</label>
                     </div>
                     <div className="pass">Ați pierdut parola?</div>
-                    <input type="submit" value="conectare"/>
+                    <a href='/myroom' ><input type="submit" value="conectare"/></a>
                     
                     
                     <div className="signup-link">

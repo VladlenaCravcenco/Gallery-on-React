@@ -3,6 +3,7 @@ import youtube from '../../resources/svg/youtube-video.svg';
 import telegram from '../../resources/svg/send-message-dm.svg';
 import instagram from '../../resources/svg/instagram.svg';
 import chekbox from '../../resources/svg/check-good-yes.svg';
+import camera from '../../resources/svg/camera-photo.svg';
 
 
 export default class EditProfile extends Component {
@@ -13,30 +14,34 @@ export default class EditProfile extends Component {
                 <div className='editprof'>
                     <div className='container-edit'>
                         <div className='edit-photo'>
-
+                            <img src={camera} />
                         </div>
                         <div className='edit-input'>
 
-                            <div className="txt-field">
+                            <div className="edit-input-txt">
+                                <div>Full name*</div>
                                 <input type="text" placeholder='Nume Prenume' required />
-                                <label>Full name*</label>
+                                
                             </div>
-                            <div className="txt-field">
+                            <div className="edit-input-txt">
+                                <div>username</div>
                                 <input type="text" placeholder='@numenume' required />
-                                <label>username</label>
+                                
                             </div>
-                            <div className="txt-field">
+                            <div className="edit-input-txt">
+                                <div>Locație</div>
                                 <input type="text" placeholder='Chisinau' required />
-                                <label>Locație</label>
-                            </div><div className="txt-field">
+                                
+                            </div><div className="edit-input-txt">
+                                <div>Profesie</div>
                                 <input type="text" placeholder='Artist' required />
-                                <label>Profesie</label>
+                                
                             </div>
 
                         </div>
 
                         <div className='social-buttons'>
-                            <title>social media</title>
+                            <div>social media</div>
 
                             <button><img src={youtube} /></button>
                             <button><img src={telegram} /></button>
@@ -46,7 +51,7 @@ export default class EditProfile extends Component {
                         </div>
 
                         <div className='edit-about'>
-                            <title>Despre mine</title>
+                            <div>Despre mine</div>
                             <div className='edit-about-place'>
                                 <input type='text' placeholder='Niște cuvinte despre mine ...' />
                             </div>
@@ -62,6 +67,8 @@ export default class EditProfile extends Component {
                         <button className='save-btn'>Salvează</button>
 
                     </div>
+
+                    
                 </div>
 
             </>

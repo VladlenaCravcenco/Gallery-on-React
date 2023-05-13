@@ -32,7 +32,7 @@ body {
 
 }
 
-/*_____________________________*/
+/*______________Header_______________*/
 .header {
     background: #fff;
     height: 115px;
@@ -113,7 +113,7 @@ body {
 
 }
 
-/*_____________________________*/
+/*_____________Slider________________*/
 
 
 
@@ -235,7 +235,7 @@ body {
     font-size: 36px;
 }
 
-/*_____________________________*/
+/*______________Cards_______________*/
 
 .cards {
     margin-bottom: 100px;
@@ -333,7 +333,7 @@ body {
 
 
 
-/*_____________________________*/
+/*______________Opere-de-arta_______________*/
 
 .container3 {
     display: flex;
@@ -466,7 +466,7 @@ body {
 }
 
 
-/*_____________________________*/
+/*___________Subscribe________________*/
 
 .form-subscribe {
     background-color: #181F22;
@@ -533,7 +533,7 @@ body {
     height: 25px;
 }
 
-/*________________________________*/
+/*______________Footer__________________*/
 
 .container-footer {
     width: 100%;
@@ -1235,8 +1235,28 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    border: 2px solid black;
+    border: 2px solid #BDA16C;
     transition: .3s;
+}
+
+.variante .cuApple,
+.variante .google,
+.variante .facebook {
+    width: 350px;
+    margin: 10px 14px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border: #181F22 solid 1px;
+
+}
+
+
+.variante .cuApple img,
+.variante .google img,
+.variante .facebook img {
+    width: 16px;
+    height: 16px;
 }
 
 .signup-link {
@@ -1253,25 +1273,30 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/* ____________sign up______________   */
+/* ____________Sign-up______________   */
+
+
+.container-signup{
+    width: 400px;
+    margin: auto;
+        border: 1px solid #181F22;
+            height: 816px;
+
+}
 
 .signup_box {
-    border: 1px solid #181F22;
 
-    width: 400px;
-    height: 816px;
-    margin: auto;
-
+ height: 816px;
 }
 
 .exit {
     float: right;
-    margin: 25px;
+    margin: 0 25px;
 }
 
 .motiv_text {
     font-size: 20px;
-    margin-top: 60px;
+    margin-top: 25px;
     width: 335px;
     margin-left: 25px;
 }
@@ -1332,11 +1357,11 @@ input[type="submit"]:hover {
     margin-bottom: 25px;
 }
 
-.variante .cuApple,
-.variante .google,
-.variante .facebook {
+.variante-signup .cuApple,
+.variante-signup .google,
+.variante-signup .facebook {
     width: 350px;
-    margin: 10px 14px;
+    margin: 10px 25px;
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
@@ -1345,9 +1370,9 @@ input[type="submit"]:hover {
 }
 
 
-.variante .cuApple img,
-.variante .google img,
-.variante .facebook img {
+.variante-signup .cuApple img,
+.variante-signup .google img,
+.variante-signup .facebook img {
     width: 16px;
     height: 16px;
 }
@@ -1356,6 +1381,10 @@ input[type="submit"]:hover {
     text-align: center;
     color: #868686;
     font-size: 14px;
+}
+
+.link_login a{
+    color: #940E0E;
 }
 
 .termen_de_util {
@@ -1474,21 +1503,127 @@ width: 150px;
     width: 100vw;
     background-color: #BFBFBF;
     color: #181F22;
+height: 60px;
 }
 
 .container-nav-setings{
     width: 1280px;
     margin: auto;
-}
-
-ul.hr{
-    margin: 0;
-    padding: 4px;
 
 }
 
-ul.hr li{
-display: inline;
-margin-right: 10%;
-padding: 25px;
+.list-setings{
+    text-align: center;
+    display: flex;
+
 }
+.list-setings div{
+    margin: auto;
+}
+
+.list-setings a{
+width: 214px;
+height: 60px;
+display: flex;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+transition: linear .4s;
+}
+
+.list-setings a:hover{
+    border: 1px solid #868686;
+    transition: linear .4s;
+    background-color: #D5D2CC;
+
+  
+}
+
+.editprof{
+    margin: 50px 0;
+}
+.container-edit{
+    width: 1280px;
+    margin: auto;
+
+}
+.edit-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #BFBFBF;
+    text-align: center;
+    justify-content: center;
+
+}
+.edit-photo img{
+    margin: 63px;
+}
+
+.edit-input{
+    margin: 30px 0;
+
+}
+
+.edit-input-txt{
+    height: 60px;
+    width: 400px;
+    border-bottom: 1px solid #181F22;
+    margin: 30px 0;
+}
+
+.edit-input-txt div{
+    margin: 15px 0;
+}
+
+.edit-input-txt input{
+    width: 100%;
+    padding: 5px 10px;
+border-style: none;
+}
+
+.social-buttons{
+    width: 400px;
+
+}
+
+.social-buttons div{
+    margin: 20px 0;
+    width: 400px;
+}
+
+.social-buttons input{
+     width: 100%;
+    padding: 5px ;
+border-style: none;
+}
+
+.social-buttons .active{
+display: flex;
+border-bottom: 1px solid #181F22;
+}
+
+
+.edit-about{
+    width: 400px;
+    margin: 30px 0;
+}
+.edit-about-place input{
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+
+}
+
+.verify-text{
+    width: 400px;
+}
+
+.save-btn{
+     width: 200px;
+     height: 30px;
+     background-color: #BDA16C;
+     color:#F5F8FC;
+     margin: 15px 0;
+}
+

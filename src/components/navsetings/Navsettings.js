@@ -8,14 +8,12 @@ export default class NavSetings extends Component {
             <div className='navbar-setings'>
             <div className='container-nav-setings'>
                 <div className='list-setings'>
-                <ul className='hr'>
-                    <li>Editează profilul</li>
-                    <li>Cont</li>
-                    <li>Istoric comenzi</li>
-                    <li>Ratele</li>
-                    <li>Plată</li>
-                    <li>Transport</li>
-                </ul>
+                   <div><a href='/'>Editează profilul</a></div> 
+                   <div><a href='/'>Cont</a></div>
+                   <div><a href='/'>Istoric comenzi</a></div>
+                   <div><a href='/'>Ratele</a></div>
+                   <div><a href='/'>Plată</a></div>
+                   <div><a href='/'>Transport</a></div>
                 </div>
             </div>
             </div>

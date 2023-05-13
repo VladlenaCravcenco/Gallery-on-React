@@ -10,28 +10,28 @@ class HeaderBlock extends Component { //command +D
             <div className="container">
                 <div className="header-line">
                     <div className="header-logo">
-                        <a href="#" class="head-logo">
+                        <a href="/" class="head-logo">
                             GALLERY SENTIMENT
                         </a>
                     </div>
                     <div className="navbar">
                         <div className="nav">
-                            <a href="#">
+                            <a href="/">
                                 despre noi   
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 evenimente
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 licitaţie
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 artiștilor
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 opere de artă
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 contacte
                             </a>
 
@@ -39,7 +39,7 @@ class HeaderBlock extends Component { //command +D
                         <button><img src={SVGsearch} alt="" /></button>
 
                         <div className="log-in">
-                            <a href="#">
+                            <a href="/login">
                                 conectare
                             </a>
                         </div>

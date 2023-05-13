@@ -6,7 +6,7 @@ import SubscribeBlock from '../form-subsc/subscribeBlock.js';
 import FooterBlock from '../footer/footer.js';
 
 
-export default class randomProf extends Component {
+export default class RandomProf extends Component {
 
     render() {
         return (
