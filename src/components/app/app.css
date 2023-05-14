@@ -117,17 +117,29 @@ body {
 
 
 
-
-.bg-slider {
-    background: url(../../resources/bg/bg4.jpg) no-repeat;
-    height: 550px;
-    width: 100vw;
+.bg-image{
+background-image: url(../../resources/bg/bg4.jpg);
+background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-
-
-
+    width: 100vw;
+    height: 600px;
 }
 
+/*.bg-slider {
+    overflow: hidden;
+
+    
+    background-size: cover;
+}
+
+.bg-slider:before{
+    content: '';
+    background-image: url(../../resources/bg/bg4.jpg) no-repeat cover;
+    overflow-y: scroll;
+
+}*/
 
 .left-arrow {
     float: left;
@@ -147,6 +159,7 @@ body {
     display: flex;
     margin: auto;
     align-items: start;
+
 }
 
 
@@ -532,6 +545,9 @@ body {
     width: 116px;
     height: 25px;
 }
+
+
+
 
 /*______________Footer__________________*/
 

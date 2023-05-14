@@ -838,7 +838,7 @@ a {
     border-top: none;
     border-left: none;
     border-right: none;
-    -moz-appearance: textfield;
+
     color: #BDA16C;
 }
 
@@ -884,7 +884,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 5px;
     width: 100%;
     background: none;
-    -webkit-appearance: none;
+
     pointer-events: none;
 
 }
