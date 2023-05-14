@@ -13,12 +13,12 @@ export default class MainPage extends Component {
     render() {
         return (
             <>
-<HeaderBlock />
-<SliderBlock/>
-<CardsBlock />
-<OpereBlock />
-<SubscribeBlock />
-<FooterBlock />
+                <HeaderBlock />
+                <SliderBlock />
+                <CardsBlock />
+                <OpereBlock />
+                <SubscribeBlock />
+                <FooterBlock />
 
             </>
         );
