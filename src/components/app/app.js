@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import MainPage from './Mainpage.js';
-import Login from './Login.js';
-import MyRoom from './Myroom.js';
-import RandomProf from './Randomprofile.js';
+import MainPage from './mainpage.js';
+import Login from './login.js';
+import MyRoom from './myroom.js';
+import RandomProf from './randomprofile.js';
 import Setings from './Setings.js';
 import Signup from './Signup.js';
 

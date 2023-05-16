@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import arrowl from '../../resources/svg/arrow-l.svg';
-import arrowr from '../../resources/svg/arrow-r.svg';
+//import arrowl from '../../resources/svg/arrow-l.svg';
+//import arrowr from '../../resources/svg/arrow-r.svg';
 import work1 from '../../resources/works/work1.jpg';
 import work2 from '../../resources/works/work2.jpg';
 import work3 from '../../resources/works/work3.jpg';
@@ -13,87 +13,88 @@ import work9 from '../../resources/works/work9.jpg';
 import work10 from '../../resources/works/work10.jpg';
 import work11 from '../../resources/works/work11.jpg';
 
+import CustomCarousel from '../helpers/custom-carousel.js';
+import './styles.css';
+
+const productsMock = [
+    {
+        data: '01.10.2023',
+        tittle: '1-54 Marrakech',
+        description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  … ',
+        images: [work1, work2, work3, work4]
+    },
+    {
+        data: '06.13.2023',
+        tittle: 'Jam',
+        description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  …  ',
+        images: [work9, work4, work5, work6]
+    },
+    {
+        data: '07.01.2023',
+        tittle: 'New Gallery in Chișinau',
+        description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  … ',
+        images: [work10, work11, work7, work8]
+    }
+]
 
 
-class SliderBlock extends Component {
+export default class SliderBlock extends Component {
+
+    renderImages = (imagesList) => {
+        const content = imagesList.map((img, i) => {
+            return (
+                <img src={img} alt="" />
+            )
+        })
+        return content
+    }
+
+    renderOneItem = ({ data, tittle, description, images }, i) => {
+        return (
+            <a href='/'> 
+            <div className="eveniment" key={i}>
+                <div className="about-evenim">
+                    <h5>{data}</h5>
+                    <h2>{tittle}</h2>
+                    <h6>{description}</h6>
+                </div>
+                <div className="photos-evenim">
+                    {this.renderImages(images)}
+
+                </div>
+            </div>
+            </a>
+        )
+    }
+
+    renderProductsItems = (products) => {
+        let arr = []
+        products.forEach((oneProduct, index) => {
+            arr.push({
+                oneProduct: this.renderOneItem(oneProduct, index),
+            })
+        })
+        return arr
+    }
 
     render() {
         return (
             <div className="slider-conteiner">
-
- 
-                    <div className="bg-slider">
-                    </div>
-
-                    <div className="slidereveniments">
-                        <button className="left-arrow">
-                            <img src={arrowl} alt="" />
-                        </button>
-
-                        <div className="eveniments">
-                            <div className="eveniment">
-                                <div className="about-evenim">
-                                    <h5>01.10.2023</h5>
-                                    <h2>1-54 Marrakech</h2>
-                                    <h6>1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  …  <a class="a-mai-multe" href="#">mai multe</a></h6>
-
-
-                                </div>
-                                <div className="photos-evenim">
-                                    <a href="#"><img src={work4} alt="" /></a>
-                                    <a href="#"><img src={work5} alt="" /></a>
-                                    <a href="#"><img src={work6} alt="" /></a>
-                                    <a href="#"><img src={work7} alt="" /></a>
-                                    <a href="#"><img src={work8} alt="" /></a>
-
-                                </div>
-                            </div>
-
-                            <div className="eveniment">
-                                <div className="about-evenim">
-                                    <h5>06.13.2023</h5>
-                                    <h2>Jam</h2>
-                                    <h6>1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  …  <a class="a-mai-multe" href="#">mai multe</a></h6>
-
-
-                                </div>
-                                <div className="photos-evenim">
-                                    <a href="#"><img src={work9} alt="" /></a>
-                                    <a href="#"><img src={work10} alt="" /></a>
-                                    <a href="#"><img src={work11} alt="" /></a>
-                                    <a href="#"><img src={work8} alt="" /></a>
-                                    <a href="#"><img src={work7} alt="" /></a>
-
-                                </div>
-                            </div>
-
-                            <div className="eveniment">
-                                <div className="about-evenim">
-                                    <h5>07.01.2023</h5>
-                                    <h2>New Gallery in Chișinau</h2>
-                                    <h6>1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  …  <a class="a-mai-multe" href="#">mai multe</a></h6>
-
-
-                                </div>
-                                <div className="photos-evenim">
-                                    <a href="#"><img src={work1} alt="" /></a>
-                                    <a href="#"><img src={work2} alt="" /></a>
-                                    <a href="#"><img src={work4} alt="" /></a>
-                                    <a href="#"><img src={work3} alt="" /></a>
-                                    <a href="#"><img src={work5} alt="" /></a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <button className="right-arrow">
-                            <img src={arrowr} alt="" />
-                        </button>
-                    </div> 
-
+                <div className="bg-slider"/>
+                <div className="slidereveniments">
+                    <CustomCarousel
+                        swipeable={true}
+                        draggable={true}
+                        showDots={false}
+                        arrows={true}
+                        infinite={true}
+                        autoPlay={true}
+                        desktopItems={1}
+                        autoPlaySpeedInSec={3}
+                        carouselItems={this.renderProductsItems(productsMock)}
+                    />
                 </div>
+            </div>
         );
     }
-}
-
-export default SliderBlock;
+};

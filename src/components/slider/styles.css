@@ -1,0 +1,83 @@
+.bg-image{
+    background-image: url(../../resources/bg/bg4.jpg);
+    background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 600px;
+    }
+
+    .slidereveniments {
+        width: 1030px;
+        display: flex;
+        margin: auto;
+        align-items: start;
+    
+    }
+    
+    .react-multi-carousel-list{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        height: 335px;
+        top: -135px;
+        width: 1030px;
+        border: 1px #181F22 solid;
+    }
+    .eveniments {
+        width: 1030px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        margin-top: -100px;
+        height: 380px;
+        border: #181F22 solid 1px;
+        overflow-x: auto;
+    }
+    
+    .eveniment {
+        width: 1030px;
+    
+        background-color: #fff;
+    
+        display: flex;
+    
+        align-items: center;
+    
+    
+    }
+
+    .about-evenim {
+        width: 256px;
+        margin: 65px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    .about-evenim h2 {
+        margin-bottom: 20px;
+    
+    }
+    
+    .about-evenim h5 {
+        margin-bottom: 56px;
+    }
+    
+    .about-evenim h6 {
+        width: 256px;
+    }
+    
+    .photos-evenim {
+        width: 657px;
+        display: block;
+        overflow: hidden;
+        margin: 20px;
+        
+    }
+
+    .photos-evenim img {
+        width: 120px;
+        margin: 0 5px;
+    }
+
