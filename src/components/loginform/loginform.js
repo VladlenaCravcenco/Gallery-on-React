@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apple from '../../resources/svg/Apple.svg';
 import google from '../../resources/svg/Google.svg';
 import facebook from '../../resources/svg/Facebook.svg';
+
 export default class SignUp extends Component {
 
     render() {

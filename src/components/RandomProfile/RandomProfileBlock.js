@@ -10,7 +10,7 @@ import arrowl from '../../resources/svg/arrow-l.svg';
 import arrowr from '../../resources/svg/arrow-r.svg';
 
 
-class RandomProfileBlock extends Component {
+export default class RandomProfileBlock extends Component {
 
     render() {
         return (
@@ -85,6 +85,4 @@ class RandomProfileBlock extends Component {
     </div>
         );
     }
-}
-
-export default RandomProfileBlock;
+};
