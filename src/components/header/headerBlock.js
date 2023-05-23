@@ -20,7 +20,7 @@ export default class HeaderBlock extends Component {
                                 <a href="/">contacte</a>
                             </div>
 
-                            <button><img src={SVGsearch} alt="" /></button>
+                            <input type='search' name='search' />
 
                             <div className="log-in">
                                 <a href="/login">conectare </a>

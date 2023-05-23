@@ -21,19 +21,19 @@ const productsMock = [
         data: '01.10.2023',
         tittle: '1-54 Marrakech',
         description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  … ',
-        images: [work1, work2, work3, work4]
+        images: [work1, work2, work3, work4, work5]
     },
     {
         data: '06.13.2023',
         tittle: 'Jam',
         description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  …  ',
-        images: [work9, work4, work5, work6]
+        images: [work9, work4, work5, work6, work7]
     },
     {
         data: '07.01.2023',
         tittle: 'New Gallery in Chișinau',
         description: '1-54 Contemporary African Art Fair, the leading international art fair dedicated to contemporary art from Africa and the African diaspora, is delighted to announce the return of 1-54 Marrakech at La Mamounia hotel, recently voted the Best Hotel in the World by Condé Nast Traveller. The fourth  … ',
-        images: [work10, work11, work7, work8]
+        images: [work10, work11, work7, work8, work9]
     }
 ]
 
@@ -56,7 +56,7 @@ export default class SliderBlock extends Component {
                 <div className="about-evenim">
                     <h5>{data}</h5>
                     <h2>{tittle}</h2>
-                    <h6>{description}</h6>
+                    <h4>{description}</h4>
                 </div>
                 <div className="photos-evenim">
                     {this.renderImages(images)}
@@ -80,7 +80,7 @@ export default class SliderBlock extends Component {
     render() {
         return (
             <div className="slider-conteiner">
-                <div className="bg-slider"/>
+                <div className="bg-image"/>
                 <div className="slidereveniments">
                     <CustomCarousel
                         swipeable={true}

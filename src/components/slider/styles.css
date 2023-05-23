@@ -8,6 +8,12 @@
         height: 600px;
     }
 
+@media only screen and (max-device-width:1280px){
+    .bg-image{
+background-attachment: scroll;
+    }
+}
+
     .slidereveniments {
         width: 1030px;
         display: flex;
@@ -25,6 +31,10 @@
         top: -135px;
         width: 1030px;
         border: 1px #181F22 solid;
+    }
+
+    .react-multi-carousel-track{
+height: 336px;
     }
     .eveniments {
         width: 1030px;
@@ -55,17 +65,20 @@
         font-family: 'Quicksand', sans-serif;
     }
     
+    .about-evenim h5 {
+        margin-bottom: 46px;
+    }
+    
+
     .about-evenim h2 {
         margin-bottom: 20px;
     
     }
     
-    .about-evenim h5 {
-        margin-bottom: 56px;
-    }
     
-    .about-evenim h6 {
+    .about-evenim h4 {
         width: 256px;
+        line-height: 1.2rem;
     }
     
     .photos-evenim {
