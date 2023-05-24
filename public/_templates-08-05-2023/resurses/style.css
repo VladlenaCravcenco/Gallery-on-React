@@ -1300,7 +1300,6 @@ font-size: 14px;
 
 .container-head-prof-room{
     width: 100vw;
-    margin-bottom: 50px;
     background: rgb(0,31,29);
     height: 350px;
     display: flex;
@@ -1332,8 +1331,6 @@ float: left;
 .button_setari{
 
     margin: auto;
-     width: 160px;
-     height: 25px;
      border: #D5D2CC solid 1px;
      cursor: pointer;
     color: #BFBFBF;
@@ -1372,17 +1369,3 @@ cursor: pointer;
 }
 
 
-.navbar_adaugari{
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    border-bottom: 1px linear #181F22
-
-}
-
-.grid_adaugari{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2,auto);
-grid-gap: 30px;
-}

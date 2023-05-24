@@ -12,15 +12,15 @@ export default class HeaderBlock extends Component {
                         </div>
                         <div className="navbar">
                             <div className="nav">
-                                <a href="/">despre noi</a>
-                                <a href="/">evenimente</a>
-                                <a href="/">licitaţie</a>
-                                <a href="/">artiștilor</a>
-                                <a href="/">opere de artă</a>
-                                <a href="/">contacte</a>
+                                <a href="/desprenoi">despre noi</a>
+                                <a href="/evenimente">evenimente</a>
+                                <a href="/licitatie">licitaţie</a>
+                                <a href="/artistii">artiștii</a>
+                                <a href="/tablouripopulare">opere de artă</a>
+                                <a href="/contacte">contacte</a>
                             </div>
 
-                            <input type='search' name='search' />
+                            <input type='search' name='search'/>
 
                             <div className="log-in">
                                 <a href="/login">conectare </a>

@@ -12,9 +12,9 @@ class FooterBlock extends Component {
             <div className="footer">
                     <div className="container-footer">
                         <div className="footer-bar">
-                            <a href="#">despre noi</a>
-                            <a href="#">contacte</a>
-                            <a href="#">sprijin</a>
+                            <a href="/desprenoi">despre noi</a>
+                            <a href="/contacte">contacte</a>
+                            <a href="/">sprijin</a>
                         </div>
                         <div className="footer-line">
                             <div className="logo-copy">

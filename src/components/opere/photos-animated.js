@@ -23,15 +23,15 @@ import Work11 from '../../resources/works/work11.jpg';
     render(){
         return (
             <div className="grid">
-                <div className="grid-photo1" data-aos='fade-down'><img className="grid-photo1" src={Work4} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo2"><img className="grid-photo2" src={Work5} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo3"><img className="grid-photo3" src={Work6} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo4"><img className="grid-photo4" src={Work7} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo5"><img className="grid-photo5" src={Work8} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo6"><img className="grid-photo6" src={Work9} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo7"><img className="grid-photo7" src={Work10} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo8"><img className="grid-photo8" src={Work11} alt="" /></div>
-                <div data-aos="fade-down" className="grid-photo9"><img className="grid-photo9" src={Work1} alt="" /></div>
+                <div className="grid-photo1" data-aos="fade-down"><a href='/'><img className="grid-photo1" src={Work4} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo2"><a href='/'><img className="grid-photo2" src={Work5} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo3"><a href='/'><img className="grid-photo3" src={Work6} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo4"><a href='/'><img className="grid-photo4" src={Work7} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo5"><a href='/'><img className="grid-photo5" src={Work8} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo6"><a href='/'><img className="grid-photo6" src={Work9} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo7"><a href='/'><img className="grid-photo7" src={Work10} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo8"><a href='/'><img className="grid-photo8" src={Work11} alt="" /></a></div>
+                <div data-aos="fade-down" className="grid-photo9"><a href='/'><img className="grid-photo9" src={Work1} alt="" /></a></div>
             </div>
 
         );

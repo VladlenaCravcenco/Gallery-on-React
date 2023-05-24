@@ -1424,18 +1424,3 @@ input[type="submit"]:hover {
     color: #BFBFBF;
     cursor: pointer;
 }
-
-
-.navbar_adaugari {
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    border-bottom: 1px linear #181F22
-}
-
-.grid_adaugari {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 30px;
-}

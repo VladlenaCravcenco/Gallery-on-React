@@ -33,9 +33,9 @@ class Myroomheader extends Component {
                                 <a href="#"><img src={Instaw} alt="" /></a>
                             </div>
                         </div>
-                        <div className="button_setari">
+                        <a href='/setings'><div className="button_setari">
                             setări
-                        </div>
+                        </div></a>
                     </div>
 
                 </div>
