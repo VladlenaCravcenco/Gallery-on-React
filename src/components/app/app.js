@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import MainPage from './mainpage.js';
 import Login from './login.js';
@@ -16,33 +16,33 @@ import Contacte from './contacte'
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-export default class App extends Component {
+const App = () => {
 
-    render() {
-        return (
-            <>
-                <BrowserRouter>
+    return (
+        <>
+            <BrowserRouter>
 
-                    <Routes>
-                        <Route path='/' Component={MainPage} />
-                        <Route path='/login' Component={Login} />
-                        <Route path='/myroom' Component={MyRoom} />
-                        <Route path='/random' Component={RandomProf} />
-                        <Route path='/setings' Component={Setings} />
-                        <Route path='/signup' Component={Signup} />
-                        <Route path='/tablouripopulare' Component={TablouriPopulare} />
-                        <Route path='/desprenoi' Component={Desprenoi} />
-                        <Route path='/evenimente' Component={Evenimente} />
-                        <Route path='/licitatie' Component={Licitatie} />
-                        <Route path='/artistii' Component={Artistii} />
-                        <Route path='/contacte' Component={Contacte} />
+                <Routes>
+                    <Route path='/' Component={MainPage} />
+                    <Route path='/login' Component={Login} />
+                    <Route path='/myroom' Component={MyRoom} />
+                    <Route path='/random' Component={RandomProf} />
+                    <Route path='/setings' Component={Setings} />
+                    <Route path='/signup' Component={Signup} />
+                    <Route path='/tablouripopulare' Component={TablouriPopulare} />
+                    <Route path='/desprenoi' Component={Desprenoi} />
+                    <Route path='/evenimente' Component={Evenimente} />
+                    <Route path='/licitatie' Component={Licitatie} />
+                    <Route path='/artistii' Component={Artistii} />
+                    <Route path='/contacte' Component={Contacte} />
 
-                    </Routes>
+                </Routes>
 
 
-                </BrowserRouter>
+            </BrowserRouter>
 
-            </>
-        )
-    }
+        </>
+    )
+
 };
+export default App;

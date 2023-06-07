@@ -31,17 +31,18 @@ body {
 
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-ul{
+
+ul {
     list-style-type: none;
 
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -270,6 +271,39 @@ nav input[type=search]:focus {
     text-decoration: underline;
 }
 
+
+@media screen and (max-width: 720px) {
+    .bg-image {
+        background-image: url(../../resources/bg/bg4.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 400px;
+    }
+
+    .slidereveniments {
+        width: 320px;
+        display: flex;
+        margin: auto;
+        height: 200px;
+
+    }
+
+    .eveniments {
+        width: 320px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        margin-top: -100px;
+        height: 380px;
+        border: #181F22 solid 1px;
+        overflow-x: auto;
+    }
+
+}
+
 /*_____________________________*/
 
 .about {
@@ -402,6 +436,7 @@ nav input[type=search]:focus {
     background-color: #181F22;
     align-self: center;
 }
+
 
 .opere-info h1 {
     color: #fff;
@@ -586,7 +621,67 @@ nav input[type=search]:focus {
     transition: .4s;
 }
 
+@media screen and (max-width:720px) {
+    .container3 {
+        display: block;
+        height: 1000px;
+        
+
+    }
+
+    .opere-info {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 25px;
+        height: 200px;
+        background-color: #181F22;
+        align-self: center;
+    }
+
+    .opere-info h1 {
+        font-size: 1rem;
+        font-family: 'Bodoni Moda', serif;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    .opere-info p {
+        width: 210px;
+        height: 10px;
+   
+        font-size: 14px;
+    
+        margin-bottom: 40px;
+        overflow-x: hidden;
+    }
+    .grid {
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 16px;
+        width: 100%;
+        
+    }
+    .opere-info a {
+        padding: 8px 50px;
+        background-color: #BDA16C;
+        font-size: 14px;
+        transition: .2s;
+    }
+    
+    .opere-info a:hover {
+        background-color: #F5F8FC;
+        transition: .2s;
+    }
+}
+
 /*___________Subscribe________________*/
+
+
 
 .form-subscribe {
     background-color: #181F22;
@@ -615,7 +710,7 @@ nav input[type=search]:focus {
     background-color: #BDA16C;
 }
 
-.bg-form {
+.bg_form {
     height: 290px;
     width: 600px;
     background-color: #fff;
@@ -653,7 +748,58 @@ nav input[type=search]:focus {
     height: 25px;
 }
 
+@media screen and (max-width:720px) {
 
+    .bg_form {
+        height: 290px;
+        width: 390px;
+        background-color: #fff;
+        margin: auto;
+        padding: 40px;
+        box-sizing: border-box;
+
+    }
+
+    .subscribe-button {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    h2 {
+        color: #181F22;
+        font-family: 'Quicksand', sans-serif;
+        width: 330px;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    .bg-pic {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        align-items: center;
+    }
+
+    .btn-conect,
+    .btn-registr {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #fff;
+        font-family: 'Quicksand', sans-serif;
+        cursor: pointer;
+        background-color: #BDA16C;
+        width: 200px;
+        height: 30px;
+    }
+}
 
 
 /*______________Footer__________________*/
@@ -720,6 +866,72 @@ nav input[type=search]:focus {
 .copyright h6 {
     margin: 0;
 }
+
+@media screen and (max-width:720px) {
+    .container-footer {
+        width: 100%;
+    }
+
+    .footer-bar {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .footer-bar a {
+        margin: 0 8px;
+    }
+
+    .footer-line {
+        display: block;
+        margin: auto;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+
+    }
+
+    .logo-copy {
+        width: 390px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .footer-logo {
+        text-decoration: none;
+        color: black;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 30px;
+        border-right: #181F22 solid 1px;
+        width: 390px;
+
+    }
+
+    .socials {
+        float: right;
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    .socials a {
+        justify-content: center;
+        padding-left: 5px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .copyright h6 {
+        margin: 0;
+    }
+}
+
 
 /*********************************/
 body {

@@ -10,7 +10,7 @@ export default class SubscribeBlock extends Component {
                 <div className="bg-pic">
 
                     <div className="bgleft"></div>
-                    <div className="bg-form">
+                    <div className="bg_form">
 
                         <h2>Înscrieți-vă pentru a colecta artă de la cei mai importanți artiști din Moldova</h2>
                         <div className="subscribe-button">
