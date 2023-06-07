@@ -55,7 +55,7 @@ export default class SliderBlock extends Component {
             <div className="eveniment" key={i}>
                 <div className="about-evenim">
                     <h5>{data}</h5>
-                    <h2>{tittle}</h2>
+                    <h1>{tittle}</h1>
                     <h4>{description}</h4>
                 </div>
                 <div className="photos-evenim">

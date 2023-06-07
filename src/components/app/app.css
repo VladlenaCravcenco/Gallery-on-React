@@ -1,4 +1,4 @@
-.main-container {
+/* .main-container {
     max-width: 600px;
     margin: auto;
 }
@@ -22,91 +22,120 @@
 
 .d-flex {
     justify-content: space-between;
-}
+} */
 
 
 body {
-    margin: 0px;
     font-family: 'Bodoni Moda', serif;
     font-family: 'Quicksand', sans-serif;
 
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+
 /*______________Header_______________*/
-.header {
-    background: #fff;
-    height: 115px;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    width: 100%;
-    z-index: 1001;
-}
 
-.header-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.head-logo {
+/* .head-logo{
     text-decoration: none;
     color: #181F22;
     font-family: 'Bodoni Moda', serif;
-    font-size: 28px;
+    font-size: 2rem;
     text-transform: uppercase;
 
 }
 
-.container {
-    padding: 36px 60px;
-}
-
 .navbar {
-    float: right;
+    width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
-    width: calc(45%);
+    padding: 1rem;
     justify-content: space-between;
+}
 
+
+.menu {
+    display: flex;
+    align-items: center;
 
 }
 
-.nav a {
-    transition: 0.3s;
-    position: relative;
-    margin-right: 20px;
+.menu li {
+    padding: 1rem;
+
 }
 
-.nav a::after {
+.navbar a {
+    font-size: .8rem;
+    color: #181F22;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .mobile-navbar {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+        z-index: 1003;
+    }
+}
+
+.mobile-navbar {
+    display: block;
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    content: "";
-    width: 0%;
-    height: 2px;
-    background-color: #D5D2CC;
-    transition: width 0.4s ease-out;
-
+    right: 1rem;
+    cursor: pointer;
+    z-index: 1003;
 }
-
-.nav a:hover.nav a::after {
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
     width: 100%;
+    height: 100vh;
+    justify-content: center;
+
+    background-color: #fff;
+    z-index: 10;
+    transition: left 1s;
 }
 
-input[type=search] {
+.active{
+    left: 0;
+}
+
+
+nav input[type=search] {
     width: 20px;
     background-image: url(../../resources/svg/search.svg);
     background-repeat: no-repeat;
     background-position: 2px 2px;
     border: none;
-    transition: width 0.4s ease-in-out;
     font-family: 'Quicksand', sans-serif;
 
 }
 
-input[type=search]:focus {
+nav input[type=search]:focus {
     width: 500px;
     border-bottom: 1px solid #181F22;
     padding: 10px 10px 10px 40px;
@@ -117,11 +146,9 @@ input[type=search]:focus {
     transition: width 0.4s ease-in-out;
 }
 
-.log-in a {
+.nav a {
     background-color: #181F22;
     color: #fff;
-    width: 76px;
-    height: 31px;
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
     padding: 8px 30px;
@@ -130,16 +157,16 @@ input[type=search]:focus {
     box-sizing: border-box;
 }
 
-.log-in a:hover {
+.nav a:hover {
     background-color: transparent;
     border: 1px black solid;
-    width: 76px;
-    height: 31px;
     transition: 0.2s linear;
     color: #181F22;
     box-sizing: border-box;
 
-}
+} */
+
+
 
 /*_____________Slider________________*/
 
@@ -154,20 +181,6 @@ input[type=search]:focus {
     width: 100vw;
     height: 700px;
 }
-
-/*.bg-slider {
-    overflow: hidden;
-
-    
-    background-size: cover;
-}
-
-.bg-slider:before{
-    content: '';
-    background-image: url(../../resources/bg/bg4.jpg) no-repeat cover;
-    overflow-y: scroll;
-
-}*/
 
 .left-arrow {
     float: left;
@@ -1867,4 +1880,16 @@ input[type="submit"]:hover {
     transition: 2s;
     border: #0d3d70 solid 1px;
     border-radius: 10px;
+}
+
+/*____________________DESPRENOI______________________*/
+
+
+.about-block .container {
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
 }

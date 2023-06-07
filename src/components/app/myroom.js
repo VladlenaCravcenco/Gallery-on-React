@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import HeaderBlock from '../header/headerBlock.js';
+import HeaderBlock from '../header/headerBlock';
 import Myroomheader from '../Myroomheader/Myroomheader.js';
 import MenuAdd from '../Myroomheader/menu-add.js';
 

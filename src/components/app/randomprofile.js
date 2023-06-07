@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeaderBlock from '../header/headerBlock.js';
+import HeaderBlock from '../header/headerBlock';
 import RandomProfileBlock from '../RandomProfile/RandomProfileBlock.js';
 import RandomLucruri from '../RandomProfile/randomlucruri.js';
 import SubscribeBlock from '../form-subsc/subscribeBlock.js';

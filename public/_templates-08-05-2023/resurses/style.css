@@ -1,11 +1,11 @@
-body{
+/* body{
 margin: 0px;
 font-family: 'Bodoni Moda', serif;
 font-family: 'Quicksand', sans-serif;
 
-}
+} */
 /*_____________________________*/
-.header {
+/* .header {
     background: #fff;
     height: 115px;
 }
@@ -83,13 +83,13 @@ box-sizing: border-box;
     color: #181F22;
     box-sizing: border-box;
 
-}
+} */
 
 /*_____________________________*/
 
 
 
-
+/* 
 .bg-slider {
     background: url(../resurses/bg4.jpg) no-repeat;
     height: 550px;
@@ -181,10 +181,10 @@ overflow: hidden;
 .a-mai-multe{
     font-weight: bold;
     text-decoration: underline;
-}
+} */
 /*_____________________________*/
 
-.about{
+/* .about{
     margin-top: 900px;
 
 }
@@ -199,11 +199,11 @@ margin-left: 5%;
 .text-description span{
     font-family: 'Bodoni Moda', serif;
 font-size: 36px;
-}
+} */
 
 /*_____________________________*/
 
-.cards{
+/* .cards{
     margin-bottom: 100px;
 }
 
@@ -297,11 +297,11 @@ margin-top: 16px;
 }
 
 
-
+ */
 
 /*_____________________________*/
 
-.container3{
+/* .container3{
     display: flex;
     height: 1000px;
 }
@@ -420,11 +420,11 @@ align-self: flex-start;
     justify-self: start;
 align-self: flex-start;
 }
-
+ */
 
 /*_____________________________*/
 
-.form-subscribe{
+/* .form-subscribe{
         background-color: #181F22 ;
     height: 400px;
     width: 100%;
@@ -481,11 +481,11 @@ margin: auto;
     background-color: #BDA16C;
     width: 116px;
     height: 25px;
-}
+} */
 
 /*________________________________*/
 
-.container-footer{
+/* .container-footer{
     width: 100%;
 }
 .footer-bar{
@@ -541,10 +541,10 @@ margin: auto;
 
 .copyright h6{
     margin: 0;
-}
+} */
 
 /*********************************/
-body{
+/* body{
     margin: 0px;
     font-family: 'Bodoni Moda', serif;
     font-family: 'Quicksand', sans-serif;
@@ -563,14 +563,14 @@ a{
     color: black;
     font-size: 12px;
     width: fit-content;
-}
+} */
 
 
     
 
 /*_____________________________*/
 
-.container-head-prof{
+/* .container-head-prof{
     width: 100vw;
     margin-bottom: 50px;
     background: rgb(0,31,29);
@@ -1071,11 +1071,11 @@ padding: 22px;
 flex: 0 0 auto;
 transition: 0.3s opacity;
 
-}
+} */
 
 /*__________________________________________*/
 
-.log-container{
+/* .log-container{
 width: 100%;
 height: 600px;
 margin: 50px 0;
@@ -1186,7 +1186,7 @@ input[type="submit"]:hover{
 }
 /*  sign up   */
 
-.signup_box{
+/* .signup_box{
     border: 1px solid #181F22;
 
     width: 400px;
@@ -1293,12 +1293,12 @@ padding: 15px;
 width: 350px;
 margin: 20px 25px;
 font-size: 14px;
-}
+} */ 
 
 
 /*   my room   */
 
-.container-head-prof-room{
+/* .container-head-prof-room{
     width: 100vw;
     background: rgb(0,31,29);
     height: 350px;
@@ -1367,5 +1367,5 @@ float: left;
     color: #BFBFBF;
 cursor: pointer;
 }
-
+ */
 

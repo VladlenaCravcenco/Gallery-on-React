@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeaderBlock from '../header/headerBlock.js';
+import HeaderBlock from '../header/headerBlock';
 
 
 import SubscribeBlock from '../form-subsc/subscribeBlock.js';

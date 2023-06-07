@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeaderBlock from '../header/headerBlock.js';
+import HeaderBlock from '../header/headerBlock';
 import NavSetings from '../navsetings/Navsettings.js'; 
 import EditProfile from '../navsetings/editprofile.js';
 
