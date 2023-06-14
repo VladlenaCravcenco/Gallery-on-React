@@ -5,6 +5,10 @@
     align-items: center;
     padding: 1rem;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    background-color: #fff;
 }
 
 .menu {
@@ -31,7 +35,7 @@
     text-decoration: none;
     color: #181F22;
     font-family: 'Bodoni Moda', serif;
-    font-size: 2rem;
+    font-size:  2vw;
     text-transform: uppercase;
 
 }
@@ -99,6 +103,10 @@ header input[type=search]:focus {
 
 }
 
+.pos-absolute{
+    position: absolute;
+}
+
 
 @media screen and (max-width: 720px) {
     .navbar {
@@ -112,7 +120,7 @@ header input[type=search]:focus {
     }
 
     .head-logo {
-        font-size: 1rem;
+        font-size: 3vw;
 
     }
 
@@ -129,7 +137,7 @@ header input[type=search]:focus {
         justify-content: center;
         background-color: #ffffff;
         z-index: 1010;
-        transition: left 1s;
+        transition: left .3s;
     }
 
     .active {

@@ -230,7 +230,7 @@ nav input[type=search]:focus {
 
 .about-evenim {
     width: 256px;
-    margin: 30px;
+    margin: 35px;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -326,7 +326,7 @@ nav input[type=search]:focus {
 /*______________Cards_______________*/
 
 .cards {
-    margin-bottom: 100px;
+    margin: 100px 0 ;
 }
 
 
@@ -1167,7 +1167,7 @@ a {
 
 }
 
-.radio {
+.checkbox {
     margin: 8px 0;
 }
 
