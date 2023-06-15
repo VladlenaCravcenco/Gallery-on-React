@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
+import { React, Component } from 'react';
 import HeaderBlock from '../header/headerBlock';
 
 
 import SubscribeBlock from '../form-subsc/subscribeBlock.js';
 import FooterBlock from '../footer/footer.js';
-export default class Artistii extends Component {
+import ArtistiiBlock from '../artistii/artistiiBlock';
 
-    render() {
-        return (
-            <>
-                <HeaderBlock />
+const Artistii = () => {
 
 
-                <SubscribeBlock />
-                <FooterBlock />
-            </>
-        );
-    }
+    return (
+        <>
+            <HeaderBlock />
+            <ArtistiiBlock />
+
+            <SubscribeBlock />
+            <FooterBlock />
+        </>
+    );
+
 };
+export default Artistii;
