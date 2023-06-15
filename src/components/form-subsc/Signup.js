@@ -3,6 +3,8 @@ import Modal from '../modal/modal'
 import apple from '../../resources/svg/Apple.svg';
 import google from '../../resources/svg/Google.svg';
 import facebook from '../../resources/svg/Facebook.svg';
+import '../modal/modal.css'
+
 
 const SignupBtn = () => {
 

@@ -19,6 +19,7 @@
 pointer-events: all;
     transition: 0.3s;
     opacity: 1;
+    z-index: 1;
 
 }
 

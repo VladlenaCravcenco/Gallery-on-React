@@ -1,3 +1,5 @@
+import { React, useState } from 'react';
+import Modal from '../modal/modal'
 import heartEmpty from '../../resources/svg/heart-empty.svg';
 import work3 from '../../resources/works/work3.jpg';
 import work4 from '../../resources/works/work4.jpg';
@@ -9,6 +11,10 @@ import work9 from '../../resources/works/work9.jpg';
 import work10 from '../../resources/works/work10.jpg';
 import heartcolor from '../../resources/svg/heart-color.svg';
 import './randomstyle.css'
+import '../modal/modal.css'
+
+
+
 const materials = [
     'acril',
     'bijuterie',
@@ -124,7 +130,7 @@ const CardsArr = [
 
 
 const CardsLucruri = (props) => {
-
+    const [modalActive, setModalActive] = useState(false)
     const renderImages = () => {
 
         const { filters } = props
@@ -145,27 +151,54 @@ const CardsLucruri = (props) => {
         const content = arr.map(({ img, nameArtist, denumire, price }, index) => {
 
             return (
-                <div className={`xcard_${index + 1}`}>
-                    <div className="photo_x">
-                        <img src={img} alt="" />
-                    </div>
-                    <div className="nume_x">
-                        <div className="x-name">
-                            {nameArtist}
-                            <div className="like_x">
-                                <img src={heartEmpty} alt="" />
+                <>
+                    <a onClick={() => setModalActive(true)}>
+
+                        <div className={`xcard_${index + 1}`}>
+                            <div className="photo_x">
+                                <img src={img} alt="" />
                             </div>
+                            <div className="nume_x">
+                                <div className="x-name">
+                                    {nameArtist}
+                                    <div className="like_x">
+                                        <img src={heartEmpty} alt="" />
+                                    </div>
 
+                                </div>
+                                <div className="denumirea">
+                                    {denumire}
+                                </div>
+                                <div className="xprice">
+                                    {price}
+                                </div>
+                            </div>
                         </div>
-                        <div className="denumirea">
-                            {denumire}
-                        </div>
-                        <div className="xprice">
-                            {price}
-                        </div>
-                    </div>
-                </div>
 
+                    </a>
+                    <Modal active={modalActive} setActive={setModalActive}>
+                        
+                            <div className="photo_x_mod">
+                                <img src={img} alt="" />
+                            </div>
+                            <div className="nume_x_mod">
+                                <div className="x-name_mod">
+                                    {nameArtist}
+                                    <div className="like_x">
+                                        <img src={heartEmpty} alt="" />
+                                    </div>
+
+                                </div>
+                                <div className="denumirea_mod">
+                                    {denumire}
+                                </div>
+                                <div className="xprice_mod">
+                                    {price}
+                                </div>
+                            </div>
+                     
+                    </Modal>
+                </>
             )
 
         })

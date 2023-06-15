@@ -531,3 +531,44 @@ input[type="range"]::-moz-range-thumb {
     transition: 0.3s opacity;
 
 }
+/*_________________*/
+
+.view_btn a{
+     display: flex;
+     text-align: center;
+     justify-content: center;
+}
+.view_btn img{
+    margin-right: 5px;
+}
+
+.view-room{
+width: 90vw;
+height: 90vh;
+z-index: 1100;
+   overflow: hidden;
+}
+
+.view-room .empty{
+    width: 100%;
+
+}
+.view-room .work{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 260px;
+    border: #BDA16C 10px solid;
+    filter: brightness( to botom 4 to 0 );
+}
+
+
+/*_________________*/
+
+
+.photo_x_mod img{
+    width: 400px;
+}
