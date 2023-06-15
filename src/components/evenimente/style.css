@@ -1,0 +1,92 @@
+.eveniment-back{
+margin: 100px auto 200px auto;
+width: 100vw;
+height: 65vh;
+background:linear-gradient(to bottom right, rgba(0, 31, 29, 0.85) 0%, #181F22 100%);
+}
+
+.evenx{
+    width: 75vw;
+    height: 75vh;
+    margin: 30px auto;
+    background-color: #fff;
+  position: relative;
+  top: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+}
+.main-info{
+    display: flex;
+    margin: auto;
+    padding: 36px ;
+}
+
+.main-photo{
+    width: 45%;
+    height: 400px;
+    margin-right: 25px;
+    overflow: hidden;
+
+}
+
+.main-photo img{
+
+    height: 400px;
+}
+.main-descrip{
+    width: 55%;
+}
+.data{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.5rem;
+}
+.main-tittle{
+    font-size: 2rem;
+}
+
+.main-descrip button{
+    width: 140px;
+    height: 26px;
+    border: 1px #181F22 solid;
+    margin: 25px 0;
+    cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.main-descrip button:hover{
+    border-color: #BDA16C;
+}
+
+.main-descrip button img{
+    margin-right: 5px;
+}
+
+.descrip{
+    height: 200px;
+    overflow:hidden;
+}
+
+.descrip p{
+font-size: 1rem;
+}
+
+.carousel{
+margin: auto;
+width: 90%;
+height: 40%;
+overflow-y: scroll;
+}
+
+.photo-block{
+    width: 100%;
+display: flex;
+overflow-x: auto;
+
+
+}
+
+.photo-block img{
+    height: 180px;
+    margin-right: 26px;
+}

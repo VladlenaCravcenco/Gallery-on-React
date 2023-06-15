@@ -7,7 +7,7 @@ import instaw from '../../resources/svg/instagram-white.svg';
 import work7 from '../../resources/works/work7.jpg';
 import arrowl from '../../resources/svg/arrow-l.svg';
 import arrowr from '../../resources/svg/arrow-r.svg';
-import './style.css';
+import './randomstyle.css';
 import ButtonView from './ButtonView';
 
 export default class RandomProfileBlock extends Component {
@@ -31,10 +31,10 @@ export default class RandomProfileBlock extends Component {
                         <div className="followers">
                             <h5>următori 123</h5>
                         </div>
-                        <div className="alerta">
+                        <button className="alerta">
                             <img src={alarm} alt="" />
                             creați alertă
-                        </div>
+                        </button>
                         <div className="socials">
                             <a href="#"><img src={youtube} alt="" /></a>
                             <a href="#"><img src={telegram} alt="" /></a>

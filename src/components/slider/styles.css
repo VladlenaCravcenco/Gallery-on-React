@@ -90,8 +90,8 @@ height: 336px;
     }
 
     .photos-evenim img {
-        width: 120px;
-        margin: 0 5px;
+        height: 200px;
+        margin: 15px 5px;
     }
 .react-multiple-carousel__arrow::before{
 color: #181F22;

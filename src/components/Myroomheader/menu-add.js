@@ -1,14 +1,13 @@
 import React, { Component, useState } from 'react';
-
+import Modal from '../../components/modal/modal';
 import work4 from '../../resources/works/work4.jpg';
 import heartEmpty from '../../resources/svg/heart-empty.svg';
+import './../modal/modal.css'
+
+import './../Myroomheader/myroomstyle.css'
 
 
-class MenuAdd extends Component {
-
-
-
-    render() {
+const MenuAdd = () => {
 
         const MyroomSets = () => {
 
@@ -33,6 +32,9 @@ class MenuAdd extends Component {
             };
         };
 
+        const [modalActive, setModalActive] = useState(false)
+        
+
         return (
 
             <div className="menu_adaugari">
@@ -48,7 +50,18 @@ class MenuAdd extends Component {
 
                         <div className='lucruri-set'>
                             <div className="adaugare">
-                                <button type='submit'>Adăugare</button>
+                                <button type='submit' onClick={() => setModalActive(true)}>Adăugare</button>
+                                <Modal active={modalActive} setActive={setModalActive} >
+                                    <div className='import_art'>
+                                        import
+                                    </div>
+                                    <div className='inputs-descrip'>
+                                        <input placeholder='denumire'></input>
+                                    <input placeholder='price'></input>
+                                    </div>
+                                    <button>Adăuga</button>
+                                    
+                                </Modal>
                             </div>
                             <div className="grid_adaugari">
 
@@ -105,7 +118,7 @@ class MenuAdd extends Component {
                 </div>
             </div>
         );
-    }
+    
 }
 
 export default MenuAdd;

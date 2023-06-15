@@ -8,6 +8,18 @@ import work8 from '../../resources/works/work8.jpg';
 import work9 from '../../resources/works/work9.jpg';
 import work10 from '../../resources/works/work10.jpg';
 import heartcolor from '../../resources/svg/heart-color.svg';
+import './randomstyle.css'
+const materials = [
+    'acril',
+    'bijuterie',
+    'canvas',
+    'instalatii',
+];
+const price = [
+    'mic (sub 40)',
+    'mediu (40-100)',
+    'mare(peste 100)',
+];
 
 const CardsArr = [
     {
@@ -15,8 +27,7 @@ const CardsArr = [
         nameArtist: 'Nume prenume1',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: true,
-        isAcril: true
+        materials: 'acril'
     },
     {
         img: work4,
@@ -32,7 +43,8 @@ const CardsArr = [
         denumire: 'denumire',
         price: '€999',
         isBijuterie: true,
-        isAcril: true
+        isAcril: true,
+        isCanvas: true,
     },
     {
         img: work6,
@@ -79,49 +91,49 @@ const CardsArr = [
 const CardsLucruri = (props) => {
 
     const renderImages = () => {
-        const { isAcrilProp, isBijuterieProp } = props
-        const arr = isAcrilProp ? CardsArr.filter(card => card.isAcril === isAcrilProp) : CardsArr
+        const { isAcrilProp, isBijuterieProp, isCanvasProp, isInstalatiiProp } = props
+        const arr = 0 ? CardsArr : CardsArr.filter(card => card.isAcril === isAcrilProp) && CardsArr.filter(card => card.isBijuterie === isBijuterieProp)
 
-        const content = arr.map(({ img, nameArtist, denumire, price, isAcril = false, isBijuterieProp = false },index) => {
-           
-        return (
-                        <div className={`xcard_${index + 1}`}>
-                            <div className="photo_x">
-                            <img src={img} alt="" />
-                            </div>
-                            <div className="nume_x">
-                                <div className="x-name">
-                                    {nameArtist}
-                                    <div className="like_x">
-                                        <img src={heartEmpty} alt="" />
-                                    </div>
+        const content = arr.map(({ img, nameArtist, denumire, price, isAcril = false, isBijuterie = false, isCanvas = false }, index) => {
 
-                                </div>
-                                <div className="denumirea">
-                                    {denumire}
-                                </div>
-                                <div className="xprice">
-                                    {price}
-                                </div>
+            return (
+                <div className={`xcard_${index + 1}`}>
+                    <div className="photo_x">
+                        <img src={img} alt="" />
+                    </div>
+                    <div className="nume_x">
+                        <div className="x-name">
+                            {nameArtist}
+                            <div className="like_x">
+                                <img src={heartEmpty} alt="" />
                             </div>
+
                         </div>
-                 
-        )
-        
-    })
-   return content
+                        <div className="denumirea">
+                            {denumire}
+                        </div>
+                        <div className="xprice">
+                            {price}
+                        </div>
+                    </div>
+                </div>
+
+            )
+
+        })
+        return content
     }
-    
+
 
     return (
         <div className="cards_lucruri">
-                <div className="tittle-x">76 de lucrări de artă:</div>
-                <div className="container-x">
-                    <div className="grid-x">
-                       {renderImages()}
-                    </div>
+            <div className="tittle-x">76 de lucrări de artă:</div>
+            <div className="container-x">
+                <div className="grid-x">
+                    {renderImages()}
                 </div>
             </div>
+        </div>
     )
 }
 

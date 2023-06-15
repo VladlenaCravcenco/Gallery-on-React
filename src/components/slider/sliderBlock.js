@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 //import arrowl from '../../resources/svg/arrow-l.svg';
 //import arrowr from '../../resources/svg/arrow-r.svg';
-import work1 from '../../resources/works/work1.jpg';
-import work2 from '../../resources/works/work2.jpg';
-import work3 from '../../resources/works/work3.jpg';
-import work4 from '../../resources/works/work4.jpg';
+import work1 from '../../resources/eveniments/event1.jpg';
+import work2 from '../../resources/eveniments/event1_1.jpg';
+import work3 from '../../resources/eveniments/event1_2.jpg';
+import work4 from '../../resources/eveniments/event1_3.jpg';
 import work5 from '../../resources/works/work5.jpg';
 import work6 from '../../resources/works/work6.jpg';
 import work7 from '../../resources/works/work7.jpg';
@@ -51,7 +51,7 @@ export default class SliderBlock extends Component {
 
     renderOneItem = ({ data, tittle, description, images }, i) => {
         return (
-            <a href='/'> 
+            <a href='/evenimente'> 
             <div className="eveniment" key={i}>
                 <div className="about-evenim">
                     <h5>{data}</h5>

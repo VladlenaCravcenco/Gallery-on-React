@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HeaderBlock from '../header/headerBlock';
-
-
 import SubscribeBlock from '../form-subsc/subscribeBlock.js';
 import FooterBlock from '../footer/footer.js';
-export default class Evenimente extends Component {
+import EvenimenteBlock from '../evenimente/evenimente';
 
-    render() {
-        return (
-            <>
-                <HeaderBlock />
+const EveniMente = () => {
 
+    return (
+        <>
+            <HeaderBlock />
 
-                <SubscribeBlock />
-                <FooterBlock />
-            </>
-        );
-    }
+            <EvenimenteBlock />
+            <SubscribeBlock />
+            <FooterBlock />
+        </>
+    );
 };
+
+export default EveniMente;

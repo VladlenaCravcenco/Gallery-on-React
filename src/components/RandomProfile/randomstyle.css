@@ -1,0 +1,533 @@
+.header-profile{
+    height: 80vh;
+    margin-bottom: 100px;
+}
+
+.container-head-prof {
+    width: 100vw;
+    margin-bottom: 50px;
+    background: rgb(0, 31, 29);
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.creative-header {
+    width: 350px;
+    float: left;
+    text-align: center;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 216px;
+    box-sizing: border-box;
+}
+
+.add-new-head-profile {
+    float: right;
+    margin-top: 260px;
+    margin-right: 160px;
+}
+
+.photo-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-image: url(../../resources/IMG_8145.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.painter-name {
+    font-family: 'Bodoni Moda', serif;
+    width: 350px;
+    font-size: 30px;
+    color: #D5D2CC;
+    margin: 20px 0;
+
+}
+
+.user-name {
+    color: #BFBFBF;
+    cursor: pointer;
+    margin: 20px 0;
+
+}
+
+.button_urma {
+    margin: 20px auto;
+    width: 160px;
+    height: 25px;
+    border: #D5D2CC solid 1px;
+    cursor: pointer;
+    color: #BFBFBF;
+    font-size: 12px;
+    line-height: 24px;
+    transition: 0.2s linear;
+
+}
+
+.button_urma:hover {
+    background-color: #D5D2CC;
+    color: #181F22;
+    transition: 0.2s linear;
+    margin: 20px auto;
+
+}
+
+
+
+.followers h5 {
+    color: #BFBFBF;
+    margin: 20px 0;
+
+}
+
+.alerta {
+    color: #BFBFBF;
+    cursor: pointer;
+    width: max-content;
+    height: 40px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alerta img{
+    margin-right: 5px;
+}
+
+.creative-header .socials {
+    float: none;
+    margin: 20px auto;
+}
+
+.creative-header .socials a {
+    color: #BFBFBF;
+    cursor: pointer;
+}
+
+.popular_art {
+    background-color: #fff;
+    width: 900px;
+    height: 640px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    justify-content: space-between;
+    position: relative;
+    top: 200px;
+}
+
+.arrow-right {
+    margin: auto;
+}
+
+.popular_art_info {
+    width: 300px;
+    margin: 50px;
+}
+
+.art-name {
+    font-size: 42px;
+    font-family: 'Bodoni Moda', serif;
+
+}
+
+.art-info {
+    font-size: 16px;
+    color: rgba(0, 31, 29, 0.75);
+    font-family: 'Bodoni Moda', serif;
+
+}
+
+.art-price {
+    color: black;
+    font-size: 16px;
+    font-family: 'Bodoni Moda', serif;
+
+}
+
+.art-button-view {
+    font-size: 10px;
+    color: #D5D2CC;
+    font-family: 'Quicksand', sans-serif;
+cursor: pointer;
+}
+
+.arrow-left {
+    margin-top: 74px;
+}
+
+.art-descrip {
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 18px;
+    margin-top: 26px;
+}
+
+.art-button-detalii {
+    width: 160px;
+    height: 25px;
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    border: #181F22 solid 1px;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 32px;
+    transition: 0.2s linear;
+
+}
+
+
+.art-button-detalii:hover {
+    background-color: #181F22;
+    transition: 0.2s linear;
+    color: #D5D2CC;
+    cursor: pointer;
+}
+
+.art-frame {
+    width: 420px;
+    background-color: #D5D2CC;
+    height: 535px;
+    position: relative;
+    bottom: -105px;
+}
+
+.art-main {
+    overflow: hidden;
+    width: 365px;
+    height: 505px;
+    position: relative;
+    top: 30px;
+    left: 26px;
+
+}
+ 
+/* __________________________________ */
+
+.lucruri {
+    width: 100%;
+    margin: 150px 60px;
+    display: flex;
+}
+
+.filter {
+    width: 300px;
+}
+
+.tittle {
+    font-size: 14px;
+    width: 300px;
+    margin: 20px 0;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.checkbox {
+    margin: 8px 0;
+}
+
+.Marimea,
+.Pret,
+.Material,
+.Anexe {
+    font-size: 0.8rem;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.price_input {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.field input {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10px;
+    border-bottom: #BFBFBF 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #BDA16C;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.separator {
+    width: 500px;
+    height: 1px;
+    background-color: #BDA16C;
+    margin: 20px 0;
+    position: relative;
+    right: 220px;
+}
+
+.slider-pret {
+    height: 2px;
+    margin: 30px 0;
+    background-color: #BDA16C;
+    position: relative;
+}
+
+.slider-pret .progress {
+    height: 2px;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    color: #BDA16C;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    color: #BDA16C;
+    top: -35px;
+    height: 5px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    box-shadow: none;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    background-color: #BDA16C;
+
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -moz-appearance: none;
+    background-color: #BDA16C;
+
+}
+
+.container-x {
+    display: flex;
+    justify-content: space-around;
+    width: 1220px;
+    margin-left: 60px;
+    margin-bottom: 100px;
+}
+
+.tittle-x {
+    font-size: 14px;
+    width: 300px;
+    margin: 20px 60px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.grid-x {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+
+}
+
+.xcard_1 {
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_4 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_5 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_6 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_7 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.xcard_8 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+
+.photo_x {
+    width: 280px;
+    overflow: hidden;
+
+}
+
+.photo_x img {
+    width: 280px;
+}
+
+.x-name {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+
+}
+
+.denumirea {
+    color: #BFBFBF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+
+}
+
+.xprice {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 12px;
+
+}
+
+.like_x {
+    transition: .2s linear;
+    height: 16px;
+}
+
+.like_x:hover {
+    cursor: pointer;
+    transition: .2s linear;
+    background: url(../app/app.js);
+
+}
+
+.sliders {
+    margin: 50px 90px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+
+}
+
+.slider {
+    width: 1500px;
+    height: 297px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
+}
+
+.pic-info-wrap {
+    margin: 30px 0;
+    max-width: 75%;
+    font-size: 100px;
+    text-transform: uppercase;
+    overflow: hidden;
+
+}
+
+.pic-info-wrap div {
+    display: flex;
+    width: 100%;
+
+}
+
+.pic-info-wrap h2 {
+    white-space: nowrap;
+    width: 100%;
+}
+
+@keyframes pic-info-wrap {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+
+    }
+}
+
+.pic-info-wrap div:hover {
+    animation: pic-info-wrap 6s linear infinite;
+
+}
+
+.picture {
+    box-sizing: border-box;
+
+    padding: 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: auto;
+    height: 297px;
+}
+
+.pic-img img {
+    width: auto;
+    height: 245px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+
+}
+
+.pic-info {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 22px;
+    flex: 0 0 auto;
+    transition: 0.3s opacity;
+
+}

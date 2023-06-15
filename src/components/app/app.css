@@ -326,7 +326,7 @@ nav input[type=search]:focus {
 /*______________Cards_______________*/
 
 .cards {
-    margin: 100px 0 ;
+    margin: 100px 0;
 }
 
 
@@ -339,7 +339,7 @@ nav input[type=search]:focus {
 
 .popular-cards {
     display: flex;
-    margin: auto;
+    margin: 25px auto;
     height: 520px;
     overflow-x: auto;
 }
@@ -625,7 +625,7 @@ nav input[type=search]:focus {
     .container3 {
         display: block;
         height: 1000px;
-        
+
 
     }
 
@@ -651,12 +651,13 @@ nav input[type=search]:focus {
     .opere-info p {
         width: 210px;
         height: 10px;
-   
+
         font-size: 14px;
-    
+
         margin-bottom: 40px;
         overflow-x: hidden;
     }
+
     .grid {
         overflow-y: scroll;
         display: grid;
@@ -664,15 +665,16 @@ nav input[type=search]:focus {
         grid-template-rows: repeat(3, auto);
         grid-gap: 16px;
         width: 100%;
-        
+
     }
+
     .opere-info a {
         padding: 8px 50px;
         background-color: #BDA16C;
         font-size: 14px;
         transition: .2s;
     }
-    
+
     .opere-info a:hover {
         background-color: #F5F8FC;
         transition: .2s;
@@ -960,7 +962,7 @@ a {
 
 /*_____________________________*/
 
-.container-head-prof {
+/* .container-head-prof {
     width: 100vw;
     margin-bottom: 50px;
     background: rgb(0, 31, 29);
@@ -1477,29 +1479,20 @@ input[type="range"]::-moz-range-thumb {
     flex: 0 0 auto;
     transition: 0.3s opacity;
 
-}
+} */
 
 /*___________________LOGIN_______________________*/
 
-.log-container {
-    width: 100%;
-    height: 720px;
-    margin: 140px 0 20px 0;
-}
-
-.left-log {
-    box-sizing: border-box;
-    width: 400px;
-    margin: auto;
-    height: 670px;
-    border: 1px solid black;
-
+.login-place {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .form-to-fill {
-
+    width: 400px;
     height: 600px;
-    margin: 40px 0;
+    border: 1px solid black;
 
 }
 
@@ -1518,7 +1511,7 @@ form .txt-field {
 }
 
 .txt-field input {
-
+    pointer-events: all;
     width: 100%;
     padding: 3px 5px;
     height: 40px;
@@ -1530,7 +1523,8 @@ form .txt-field {
 
 .txt-field label {
     position: absolute;
-    top: 50%;
+    top: 40%;
+    left: 0;
     color: #868686;
     pointer-events: none;
 }
@@ -1545,9 +1539,11 @@ form .txt-field {
 }
 
 .pass {
-    margin: -5px 0 20px 5px;
+    margin: -20px auto 20px auto;
     color: #868686;
     cursor: pointer;
+    font-size: .8rem;
+    width: 100%;
 }
 
 .pass:hover {
@@ -1555,8 +1551,8 @@ form .txt-field {
 }
 
 input[type="submit"] {
-    width: 350px;
-    margin: 0 14px;
+    width: 90%;
+    margin: auto;
     height: 50px;
     border: 1px solid black;
     background: none;
@@ -1566,6 +1562,7 @@ input[type="submit"] {
     font-weight: 400;
     cursor: pointer;
     outline: 0 !important;
+    text-align: center;
 
 }
 
@@ -1578,8 +1575,8 @@ input[type="submit"]:hover {
 .variante .cuApple,
 .variante .google,
 .variante .facebook {
-    width: 350px;
-    margin: 10px 14px;
+    width: 90%;
+    margin: 10px auto;
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
@@ -1611,30 +1608,34 @@ input[type="submit"]:hover {
 
 /* ____________Sign-up______________   */
 
-
-.container-signup {
-    width: 400px;
-    margin: auto;
+.signup-mod{
+ width: 800px;
     border: 1px solid #181F22;
-    height: 816px;
+    height: 500px;
+
+}
+.container-signup {
+       display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.signup_boxl {
+    padding: 30px 0;
 
 }
 
-.signup_box {
+.signup_boxr {
+    padding: 30px 0;
 
-    height: 816px;
-}
-
-.exit {
-    float: right;
-    margin: 0 25px;
 }
 
 .motiv_text {
-    font-size: 20px;
-    margin-top: 25px;
-    width: 335px;
-    margin-left: 25px;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+
 }
 
 
@@ -1642,40 +1643,31 @@ input[type="submit"]:hover {
 
     width: 300px;
     border-style: none;
-    margin: 0 25px;
+    margin: 10px 25px;
     border-bottom: #181F22 solid 1px;
     padding: 15px;
     outline: 0 !important;
 }
 
-.input_nume .tittle {
-    margin-left: 25px;
-    font-size: 14px;
-    outline: 0 !important;
-}
+
 
 
 
 .input_parola input {
     width: 300px;
     border-style: none;
-    margin: 0 25px;
+    margin: 10px 25px;
     border-bottom: #181F22 solid 1px;
     padding: 15px;
     outline: 0 !important;
 }
 
-.input_parola .tittle {
-    margin-left: 25px;
-    font-size: 14px;
-
-}
 
 
 .subtext {
-    font-size: 12px;
+    font-size: 0.8rem;
     color: #868686;
-    margin: 5px 25px;
+    margin: -5px 25px;
 }
 
 .button_registra {
@@ -1729,15 +1721,16 @@ input[type="submit"]:hover {
 .termen_de_util {
     text-align: center;
     color: #868686;
-    width: 350px;
-    margin: 20px 25px;
+    width: 80%;
+    margin: 10px auto;
     font-size: 14px;
+    text-align: center;
 }
 
 
 /*   _______________my room____________   */
 
-.menu_adaugari {
+/* .menu_adaugari {
     width: 100vw;
 }
 
@@ -1894,7 +1887,7 @@ input[type="submit"]:hover {
     grid-row: 1 / 2;
     justify-self: end;
     align-self: flex-end;
-}
+} */
 
 /*_______________Setings__________________*/
 

@@ -18,9 +18,7 @@ const CardsBlock = () => {
         <div className="cards">
             <div className="container">
                 <div className="title-cards">
-                    <h1 onClick={() => console.log('done: ')}
-
-                    >Artiști noi</h1>
+                    <h1>Artiști noi</h1>
                 </div>
 
                 <div className="popular-cards">
