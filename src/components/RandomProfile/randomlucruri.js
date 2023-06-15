@@ -68,11 +68,11 @@ export default class RandomLucruri extends Component {
 
                         <div className="Material">
                             <div className="tittle">Material</div>
-                            <div className="checkbox"><input type="checkbox" id="Acril" value={isAcril}  onChange={(e) => this.setState({ isAcril: e.target.checked})}/> <label for="Acril">Acril</label></div>
-                            <div className="checkbox"><input type="checkbox" id="Bijuterii" value={isBijuterie} onChange={(e) => this.setState({ isBijuterie: e.target.checked})}/> <label for="Bijuterii">Bijuterii</label>
+                            <div className="checkbox"><input type="checkbox" id="Acril" value={isAcril} onChange={(e) => this.setState({ isAcril: e.target.checked })} /> <label for="Acril">Acril</label></div>
+                            <div className="checkbox"><input type="checkbox" id="Bijuterii" value={isBijuterie} onChange={(e) => this.setState({ isBijuterie: e.target.checked })} /> <label for="Bijuterii">Bijuterii</label>
                             </div>
-                            <div className="checkbox"><input type="checkbox" id="Canvas" value={isCanvas} onChange={(e) => this.setState({isCanvas: e.target.checked})}/> <label for="Canvas">Canvas</label></div>
-                            <div className="checkbox"><input type="checkbox" id="Instalatii" value={isInstalatii} onChange={(e) => this.setState({isInstalatii: e.target.checked})}/> <label for="Instalatii">Instalatii</label>
+                            <div className="checkbox"><input type="checkbox" id="Canvas" value={isCanvas} onChange={(e) => this.setState({ isCanvas: e.target.checked })} /> <label for="Canvas">Canvas</label></div>
+                            <div className="checkbox"><input type="checkbox" id="Instalatii" value={isInstalatii} onChange={(e) => this.setState({ isInstalatii: e.target.checked })} /> <label for="Instalatii">Instalatii</label>
                             </div>
 
                         </div>
@@ -84,11 +84,8 @@ export default class RandomLucruri extends Component {
 
                         </div>
                     </div>
-                    <CardsLucruri 
-                        isAcrilProp={isAcril}
-                        isBijuterieProp={isBijuterie}
-                        isCanvas={isCanvas}
-                        isInstalatii={isInstalatii}
+                    <CardsLucruri
+                        filters={[{ isAcril, isBijuterie, isCanvas, isInstalatii }]}
                     />
                 </div>
 

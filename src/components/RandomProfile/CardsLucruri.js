@@ -24,77 +24,125 @@ const price = [
 const CardsArr = [
     {
         img: work3,
-        nameArtist: 'Nume prenume1',
+        nameArtist: '111Nume prenume1',
         denumire: 'denumire',
         price: '€999',
-        materials: 'acril'
+        materials: 'acril',
+        options: {
+            isBijuterie: true,
+            isAcril: null,
+            isCanvas: null,
+            isInstalatii: null,
+        }
     },
     {
         img: work4,
-        nameArtist: 'Nume prenume2',
+        nameArtist: '222Nume prenume2',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: true,
-        isAcril: true
+        options: {
+            isBijuterie: true,
+            isAcril: true,
+            isCanvas: null,
+            isInstalatii: null,
+        }
     },
     {
         img: work5,
-        nameArtist: 'Nume prenume',
+        nameArtist: '333Nume prenume',
         denumire: 'denumire',
         price: '€999',
         isBijuterie: true,
-        isAcril: true,
-        isCanvas: true,
+        options: {
+            isBijuterie: true,
+            isAcril: null,
+            isCanvas: true,
+            isInstalatii: null,
+        }
     },
     {
         img: work6,
-        nameArtist: 'Nume prenume',
+        nameArtist: '444Nume prenume',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: true,
-        isAcril: false
+        options: {
+            isBijuterie: true,
+            isAcril: null,
+            isCanvas: true,
+            isInstalatii: true,
+        }
     },
     {
         img: work7,
-        nameArtist: 'Nume prenume',
+        nameArtist: '555Nume prenume',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: true,
-        isAcril: false
+        options: {
+            isBijuterie: true,
+            isAcril: null,
+            isCanvas: null,
+            isInstalatii: true,
+        }
     },
     {
         img: work8,
-        nameArtist: 'Nume prenume',
+        nameArtist: '666Nume prenume',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: false,
-        isAcril: false
+        options: {
+            isBijuterie: null,
+            isAcril: true,
+            isCanvas: null,
+            isInstalatii: null,
+        }
     },
     {
         img: work9,
-        nameArtist: 'Nume prenume',
+        nameArtist: '777Nume prenume',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: false,
-        isAcril: true
+        options: {
+            isBijuterie: null,
+            isAcril: true,
+            isCanvas: null,
+            isInstalatii: true,
+        }
     },
     {
         img: work10,
-        nameArtist: 'Nume prenume123',
+        nameArtist: '888Nume prenume123',
         denumire: 'denumire',
         price: '€999',
-        isBijuterie: true,
-        isAcril: false
+        options: {
+            isBijuterie: null,
+            isAcril: null,
+            isCanvas: true,
+            isInstalatii: true,
+        }
     }
 ]
+
 
 const CardsLucruri = (props) => {
 
     const renderImages = () => {
-        const { isAcrilProp, isBijuterieProp, isCanvasProp, isInstalatiiProp } = props
-        const arr = 0 ? CardsArr : CardsArr.filter(card => card.isAcril === isAcrilProp) && CardsArr.filter(card => card.isBijuterie === isBijuterieProp)
 
-        const content = arr.map(({ img, nameArtist, denumire, price, isAcril = false, isBijuterie = false, isCanvas = false }, index) => {
+        const { filters } = props
+
+        let filteredArr = []
+        CardsArr.forEach(card => {
+            let i = 0
+            Object.keys(card.options).forEach(key => {
+                if (card.options[key] === filters[0][key] && i === 0) {
+                    i++;
+                    filteredArr.push(card);
+                }
+            })
+        })
+
+        const arr = filteredArr.length === 0 ? CardsArr : filteredArr
+
+        const content = arr.map(({ img, nameArtist, denumire, price }, index) => {
 
             return (
                 <div className={`xcard_${index + 1}`}>
