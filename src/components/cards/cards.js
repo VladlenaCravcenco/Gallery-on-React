@@ -1,4 +1,4 @@
-import { React} from 'react';
+import React, { useState, useEffect } from 'react';
 import heartEmpty from '../../resources/svg/heart-empty.svg';
 import work3 from '../../resources/works/work3.jpg';
 import work5 from '../../resources/works/work5.jpg';
@@ -10,6 +10,9 @@ import work10 from '../../resources/works/work10.jpg';
 import work11 from '../../resources/works/work11.jpg';
 import arrowr from '../../resources/svg/arrow-r.svg';
 import heartcolor from '../../resources/svg/heart-color.svg';
+import HookCounter from '../app/hookcounter.js';
+import { Link } from 'react-router-dom';
+import './styles.css'
 
 const CardsBlock = () => {
 
@@ -22,30 +25,32 @@ const CardsBlock = () => {
                 </div>
 
                 <div className="popular-cards">
-
-                    <a href='random'><div id="1" className="card">
-                        <div className="art">
-                            <img src={work6} alt="" />
-                            <div >
-                                <img src={heartcolor} alt="" />
+                <div className="card-container"> 
+                <HookCounter />
+                    <Link to='/random'>
+                        <div id="1" className="card">
+                            <div className="art">
+                                <img src={work6} alt="" />
+                               
+                            </div>
+                            <div className="button-room">
+                                <div className="art-descrip">
+                                    <a href='random' >Bobbi Brown</a>
+                                    <h4 >Chisinau, 2009</h4>
+                                </div>
+                                <button className="right-arrow">
+                                    <img src={arrowr} alt="" />
+                                </button>
                             </div>
                         </div>
-                        <div className="button-room">
-                            <div className="art-descrip">
-                                <a href='random' >Bobbi Brown</a>
-                                <h4 >Chisinau, 2009</h4>
-                            </div>
-                            <button className="right-arrow">
-                                <img src={arrowr} alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    </a>
+                    </Link>
+                </div>
+                    
                     <a href='random'><div id="1" className="card">
                         <div className="art">
                             <img src={work7} alt="" />
                             <div className="like">
-                                <img src={heartEmpty} alt="" />
+                                <img src={heartcolor} alt="" />
                             </div>
                         </div>
                         <div className="button-room">
