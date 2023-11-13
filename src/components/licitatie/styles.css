@@ -1,0 +1,118 @@
+.licitatie-main {
+    background: linear-gradient(rgba(0, 31, 29, 0.85), #181F22);
+    margin-top: 80px;
+}
+
+.licitatie-container {
+    margin: auto;
+    width: 1200px;
+    height: 870px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.licit-timer {
+    width: 332px;
+    height: 374px;
+    background-color: #181F22;
+    text-align: center;
+    color: #E3DEDA;
+    vertical-align: middle;
+
+}
+
+.licit-timer .tittle-timer {
+    font-size: 28px;
+    font-family: 'Bodoni Moda', serif;
+    line-height: 32px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.final-price {
+    font-size: 28px;
+    margin-bottom: 88px;
+}
+
+.timer {
+    font-size: 28px;
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 30px;
+}
+
+.button-licit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 240px;
+    margin: auto;
+
+}
+
+.button-licit input {
+    background: rgba(255, 255, 255, 0.23);
+    color: #BFBFBF;
+    width: 116px;
+    height: 25px;
+    border: none;
+    text-align: center;
+
+
+}
+
+.button-licit .ridica {
+    font-size: 12px;
+    background: #BDA16C;
+    padding: 5px 38px;
+    cursor: pointer;
+}
+
+.licit-photo-descr {
+    width: 575px;
+    height: 624px;
+
+
+}
+
+.licit-photo {
+    width: 575px;
+    height: 507px;
+}
+
+.licit-descr {
+    margin: 10px;
+    text-align: center;
+    color: #E3DEDA;
+    margin-top: 45px;
+}
+
+.top10licitatie {
+    height: 336px;
+    background-color: #E3DEDA;
+    padding-top: 64px;
+    padding-left: 46px;
+
+}
+
+.container-top10 {
+    height: 224px;
+    overflow: hidden;
+    overflow-x: scroll;
+
+    
+}
+
+.licitatie {
+    direction: ltr;
+    width: fit-content;
+    height: 208px;
+    display: table-cell;
+    padding-right: 24px;
+
+}
+
+.licitatie img {
+    height: 170px;
+
+}
