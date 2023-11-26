@@ -1,0 +1,45 @@
+.about-block{
+    margin: 100px 0;
+}
+
+.about-block p{
+width: 980px;
+margin: 50px auto;
+font-family: 'Bodoni Moda', serif;
+text-align: center;
+font-size: 1.5rem;
+}
+
+.text-block a{
+    padding: 16px 24px;
+    background-color: #BDA16C;
+    color: white;
+    font-size: 50px;
+
+}
+
+.block{
+    display: flex;
+    width: 100vw;
+}
+
+.text-block{
+    width: 50vw;
+    height: 50vh;
+    font-size: 50px;
+    padding: 50px;
+    text-align: center;
+    justify-items: center;
+    background-color: #BDA16C;
+    color: white;
+
+}
+.text-block p{
+ font-size: 1.5rem;
+width: 100%;
+}
+
+.photo img{
+    width: 50vw;
+    height: 50vh;
+}

@@ -1,0 +1,97 @@
+.cards {
+    margin: 100px 0;
+}
+
+
+.title-cards {
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.popular-cards {
+    display: flex;
+    margin: 25px auto;
+    height: 520px;
+    overflow-x: auto;
+}
+.card-container{
+    position: relative;
+}
+.card {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 8px;
+    transition: 0.3s linear;
+    margin-bottom: 40px;
+}
+
+.card:hover {
+    background-color: #D5D2CC;
+    transition: 0.3s linear;
+    translate: (-50px, 150px);
+}
+
+.art {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.art img {
+    width: 300px;
+}
+
+.like {
+    width: 23px;
+position: absolute;
+top: 0px;
+right: 0px;
+color: #181F22;
+text-align: center;
+z-index: 9;
+margin: 10px;
+}
+
+.like img {
+    width: 23px;
+}
+
+.art-descrip {
+    margin-top: 16px;
+
+}
+
+.art-descrip a {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #333;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.art-descrip h4 {
+    font-size: 12px;
+    color: #868686;
+    margin-top: 5px;
+}
+
+
+.button-room {
+
+    padding: 0 5px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.button-room img {
+    width: max-content;
+    position: relative;
+}
