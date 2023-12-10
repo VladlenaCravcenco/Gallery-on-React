@@ -13,8 +13,6 @@ const CardsBlock = () => {
 
     const [isLoading, setIsLoading] = useState(true)
     const [produsctList, setProductList] = useState([])
-   
-
     useEffect(() => {
        
         setIsLoading(true)
@@ -53,7 +51,6 @@ const CardsBlock = () => {
                 </div>
             )
         })
-
         return content
     }
 

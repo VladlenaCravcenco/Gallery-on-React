@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import heartcolor from '../../resources/svg/heart-color.svg';
 import heartEmpty from '../../resources/svg/heart-empty.svg';
 import axiosFetch from "../../helpers/axios"
@@ -10,7 +10,7 @@ function HookCounter({ likeCount, like = false, id }) {
     const [count, setCount] = useState(likeCount || 0);
     const [checked, setChecked] = useState(like);
     const token = CookieHelper("get", "token");
-    const setLike = (e) => {
+    const setLike = () => {
 
         const formData = new FormData()
         formData.append("token", token)
@@ -28,7 +28,7 @@ function HookCounter({ likeCount, like = false, id }) {
     const heart = checked ? heartcolor : heartEmpty
     return (
 
-        <div onClick={(e) => setLike(e)} className="like">
+        <div onClick={() => setLike()} className="like">
             <img src={heart} alt="" />
             {count}
         </div>
