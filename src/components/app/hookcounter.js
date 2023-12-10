@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import heartcolor from '../../resources/svg/heart-color.svg';
+import heartEmpty from '../../resources/svg/heart-empty.svg';
+import axiosFetch from "../../helpers/axios"
+import CookieHelper from "../../helpers/cookie-helper";
 
-function HookCounter() {
-    const [count, setCount] = useState(0);
+import { SET_LIKE } from "../../helpers/constants"
 
-    const someFunc = (e) => {
-        e.stopPropagation();
-        setCount(count+1)
+function HookCounter({ likeCount, like = false, id }) {
+    const [count, setCount] = useState(likeCount || 0);
+    const [checked, setChecked] = useState(like);
+    const token = CookieHelper("get", "token");
+    const setLike = (e) => {
+
+        const formData = new FormData()
+        formData.append("token", token)
+        formData.append("productId", id)
+        axiosFetch(SET_LIKE, formData).then(action => {
+            if (action === "up") {
+                setCount(count + 1)
+                setChecked(true)
+            } else {
+                setCount(count - 1)
+                setChecked(false)
+            }
+        })
     }
+    const heart = checked ? heartcolor : heartEmpty
     return (
 
-        <div 
-        
-        onClick =  {(e) => someFunc(e) } className="like">
-            <img src={heartcolor} alt="" />
+        <div onClick={(e) => setLike(e)} className="like">
+            <img src={heart} alt="" />
             {count}
         </div>
 

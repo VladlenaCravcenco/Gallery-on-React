@@ -357,7 +357,27 @@ nav input[type=search]:focus {
     transition: 0.3s linear;
     translate: (-50px, 150px);
 }
+html::-webkit-scrollbar {
+    width: 20px;
+    background: #fff;
+}
 
+/* Track */
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+    background: #ccd3dd;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: #8f9194;
+}
 .art {
     height: 400px;
     overflow: hidden;
@@ -375,6 +395,7 @@ nav input[type=search]:focus {
     top: 8px;
     right: 8px;
     color: #F5F8FC;
+    cursor: pointer;
 }
 
 .like img {

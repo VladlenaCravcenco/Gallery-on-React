@@ -9,7 +9,32 @@
     font-size: 20px;
     text-transform: uppercase;
 }
+.popular-cards .spinner{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.popular-cards::-webkit-scrollbar {
+    height: 15px;
+    background: #fff;
+}
 
+/* Track */
+.popular-cards::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+.popular-cards::-webkit-scrollbar-thumb {
+    background: #ccd3dd;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.popular-cards::-webkit-scrollbar-thumb:hover {
+    background: #8f9194;
+}
 .popular-cards {
     display: flex;
     margin: 25px auto;

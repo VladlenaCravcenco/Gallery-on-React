@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import MainPage from './mainpage.js';
 
@@ -15,8 +15,20 @@ import Contacte from './contacte'
 
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import CookieHelper from "../../helpers/cookie-helper";
+import { setToken } from "../../helpers/constants/functions"
+//"fsevents": "^2.3.2",
 const App = () => {
+
+    useEffect(() => {
+
+        const token = CookieHelper("get", "token");
+        const generateToken = setToken()
+
+        if (!token) {
+            CookieHelper("set", "token", generateToken);
+        }
+    },[])
 
     return (
         <>

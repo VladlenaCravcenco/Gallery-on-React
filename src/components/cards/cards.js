@@ -1,21 +1,63 @@
 import React, { useState, useEffect } from 'react';
-import heartEmpty from '../../resources/svg/heart-empty.svg';
-import work3 from '../../resources/works/work3.jpg';
-import work5 from '../../resources/works/work5.jpg';
-import work6 from '../../resources/works/work6.jpg';
-import work7 from '../../resources/works/work7.jpg';
-import work8 from '../../resources/works/work8.jpg';
-import work9 from '../../resources/works/work9.jpg';
-import work10 from '../../resources/works/work10.jpg';
-import work11 from '../../resources/works/work11.jpg';
 import arrowr from '../../resources/svg/arrow-r.svg';
-import heartcolor from '../../resources/svg/heart-color.svg';
 import HookCounter from '../app/hookcounter.js';
 import { Link } from 'react-router-dom';
+import { GET_PRODUCTS_LIST } from "../../helpers/constants"
+import axiosFetch from "../../helpers/axios"
+import Spinner from "../../helpers/spinner"
+import CookieHelper from "../../helpers/cookie-helper";
+
 import './styles.css'
 
 const CardsBlock = () => {
 
+    const [isLoading, setIsLoading] = useState(true)
+    const [produsctList, setProductList] = useState([])
+   
+
+    useEffect(() => {
+       
+        setIsLoading(true)
+        const token = CookieHelper("get", "token");
+        const formData = new FormData()
+        formData.append("token", token)
+        axiosFetch(GET_PRODUCTS_LIST, formData).then(res => {
+            setIsLoading(false)
+            setProductList(res)
+        })
+    }, [])
+
+    const renderGallery = () => {
+        const content = produsctList.map(item => {
+            const { id, title, shortDescription, image, like, likeCount } = item
+            return (
+                <div className="card-container">
+                    <HookCounter {...{ likeCount, like, id }} />
+                    <Link to='/random'>
+                        <div id={id} className="card">
+                            <div className="art">
+                                <img src={image} alt="" />
+
+                            </div>
+                            <div className="button-room">
+                                <div className="art-descrip">
+                                    <a href='random' >{title}</a>
+                                    <h4 >{shortDescription}</h4>
+                                </div>
+                                <button className="right-arrow">
+                                    <img src={arrowr} alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            )
+        })
+
+        return content
+    }
+
+    const content = isLoading ? <Spinner /> : renderGallery()
 
     return (
         <div className="cards">
@@ -25,182 +67,7 @@ const CardsBlock = () => {
                 </div>
 
                 <div className="popular-cards">
-                <div className="card-container"> 
-                <HookCounter />
-                    <Link to='/random'>
-                        <div id="1" className="card">
-                            <div className="art">
-                                <img src={work6} alt="" />
-                               
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href='random' >Bobbi Brown</a>
-                                    <h4 >Chisinau, 2009</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-                    
-                    <a href='random'><div id="1" className="card">
-                        <div className="art">
-                            <img src={work7} alt="" />
-                            <div className="like">
-                                <img src={heartcolor} alt="" />
-                            </div>
-                        </div>
-                        <div className="button-room">
-                            <div className="art-descrip">
-                                <a href="random">Kate Frost</a>
-                                <h4 >Chisinau, 2001</h4>
-                            </div>
-                            <button className="right-arrow">
-                                <img src={arrowr} alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    </a>
-                    <a href='random'>
-                        <div id="1" className="card">
-                            <div className="art">
-                                <img src={work9} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Willie Maye</a>
-                                    <h4 >Chisinau, 2006</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="1" className="card">
-                            <div className="art">
-                                <img src={work3} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Justin Bieber</a>
-                                    <h4 >Chisinau, 2004</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="1" className="card">
-                            <div className="art">
-                                <img src={work8} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Ted Mosbi</a>
-                                    <h4 >Chisinau, 2009</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="2" className="card">
-                            <div className="art">
-                                <img src={work10} alt="" />
-
-
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Carolina Herrera</a>
-                                    <h4 >Chisinau, 2000</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="3" className="card">
-                            <div className="art">
-                                <img src={work11} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Miley Sirus</a>
-                                    <h4 >Chisinau, 2010</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="4" className="card">
-                            <div className="art">
-                                <img src={work5} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Sirius Black</a>
-                                    <h4 >Chisinau, 1994</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <a href='random'>
-                        <div id="5" className="card">
-                            <div className="art">
-                                <img src={work6} alt="" />
-                                <div className="like">
-                                    <img src={heartEmpty} alt="" />
-                                </div>
-                            </div>
-                            <div className="button-room">
-                                <div className="art-descrip">
-                                    <a href="random">Willie Maye</a>
-                                    <h4 >Chisinau, 2006</h4>
-                                </div>
-                                <button className="right-arrow">
-                                    <img src={arrowr} alt="" />
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                    {content}
                 </div>
             </div>
         </div>

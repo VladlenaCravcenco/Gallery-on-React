@@ -8,9 +8,8 @@
     right: 0;
     bottom: 0;
     pointer-events: none;
-    opacity: 0;
+    display: none;
     transition: 0.3s;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -18,7 +17,7 @@
 .modal.active {
 pointer-events: all;
     transition: 0.3s;
-    opacity: 1;
+    display: flex;
     z-index: 1;
 
 }
