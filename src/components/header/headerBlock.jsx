@@ -5,9 +5,17 @@ import Modal from '../modal/modal'
 import apple from '../../resources/svg/Apple.svg';
 import google from '../../resources/svg/Google.svg';
 import facebook from '../../resources/svg/Facebook.svg';
+import axiosFetch from "../../helpers/axios"
+import { AUTH } from "../../helpers/constants"
+import { Navigate  } from 'react-router-dom'
+
 const HeaderBlock = () => {
     const [nav, setNav] = useState(false);
     const [modalActive, setModalActive] = useState(false)
+    const [redirect, setRedirect] = useState(false)
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     const newMenuArr = [
         {
@@ -42,8 +50,24 @@ const HeaderBlock = () => {
         })
         return content
     }
+
+    const auth = () => {
+
+        const formData = new FormData()
+
+        formData.append("email", email)
+        formData.append("password", password)
+
+        axiosFetch(AUTH, formData).then(action => {
+            console.log("action", action)
+            setRedirect(true)
+        })
+
+    }
+
     return (
         <header className={`navbar ${nav && 'pos-absolute'}`}>
+            {redirect && <Navigate  to="/myroom" />}
             <a href="/" className='head-logo'>GALLERY SENTIMENT</a>
 
             <nav>
@@ -63,15 +87,17 @@ const HeaderBlock = () => {
                                 <h1>Log in</h1>
                                 <form method="post">
                                     <div className="txt-field">
-                                        <input type="text" required />
+                                        <input value={email} type="text" required onChange={(e) => setEmail(e.target.value)} />
                                         <label>Nume de utilizator sau email</label>
                                     </div>
                                     <div className="txt-field">
-                                        <input type="password" required />
+                                        <input value={password} type="password" required onChange={(e) => setPassword(e.target.value)} />
                                         <label>Parolă</label>
                                     </div>
                                     <div className="pass">Ați pierdut parola?</div>
-                                    <a href='/myroom' ><input type="submit" value="conectare" /></a>
+                                    {/* <a href='/myroom' > */}
+                                        <input type="button" value="conectare" onClick={() => auth()} />
+                                    {/* </a> */}
 
                                     <div className="signup-link">
                                         Don't have an account? <a href="signup">Creează un cont nou</a>

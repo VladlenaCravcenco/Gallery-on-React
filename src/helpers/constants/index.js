@@ -9,3 +9,4 @@ export const ONE_PRODUCT_EMPTY_DATA = {}
 
 export const GET_PRODUCTS_LIST = API_URL + "/getProductsList" 
 export const SET_LIKE = API_URL + "/setLike" 
+export const AUTH = API_URL + "/auth" 
