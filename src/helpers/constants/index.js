@@ -1,5 +1,5 @@
 export const SITE_URL = "http://localhost:3000/";
-export const API_URL = 'http://vlada-art.ssv-design.com/Main';
+export const API_URL = 'http://localhost:8888/gallery/Main';
 export const BASE_URL = 'http://vlada-art.ssv-design.com/';
 
 export const NO_IMAGE_URL = BASE_URL + 'uploads/no-image.png';

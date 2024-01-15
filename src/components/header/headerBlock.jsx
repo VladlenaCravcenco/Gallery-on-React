@@ -65,6 +65,41 @@ const HeaderBlock = () => {
 
     }
 
+    const [formData, setFormData] = useState({
+        email: '',
+        rassword: ''
+    })
+
+    const [errors, setErrors] = useState({})
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData, [name]: value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const validationErrors = {}
+        if (!formData.email.trim()) {
+            validationErrors.email = 'email is required'
+        } else if (!/\S+@\S+\.\S+/.text(formData.email))
+         { validationErrors.email = 'email is not valid' }
+
+         if (!formData.password.trim()) {
+            validationErrors.password = 'password is required'
+        } else if (!(formData.password.length < 6))
+         { validationErrors.password = 'password shhould be at least 6 char' }
+
+         setErrors(validationErrors)
+
+         if(Object.keys(validationErrors).length === 0) {
+            alert("Form Submitted successfully") 
+         }
+    }
+
     return (
         <header className={`navbar ${nav && 'pos-absolute'}`}>
             {redirect && <Navigate  to="/myroom" />}
@@ -78,25 +113,27 @@ const HeaderBlock = () => {
             </nav>
             <div className='right-nav'>
                 <input type='search' name='search' />
-                <a className='btn-conectare' onClick={() => setModalActive(true)} >conectare</a>
+                <button className='btn-conectare' onClick={() => setModalActive(true)} >conectare</button>
                 <Modal id="signup" active={modalActive} setActive={setModalActive}>
                     <div className="login-place">
                         <div className="log-container">
 
                             <div className="form-to-fill">
                                 <h1>Log in</h1>
-                                <form method="post">
+                                <form onSubmit={handleSubmit} method="post">
                                     <div className="txt-field">
-                                        <input value={email} type="text" required onChange={(e) => setEmail(e.target.value)} />
+                                    {errors.email && <span>{errors.email}</span>}
+                                        <input onChange={handleChange} value={email} type="email" required />
                                         <label>Nume de utilizator sau email</label>
                                     </div>
                                     <div className="txt-field">
-                                        <input value={password} type="password" required onChange={(e) => setPassword(e.target.value)} />
+                                    {errors.password && <span>{errors.password}</span>}
+                                        <input onChange={handleChange} value={password} type="password" required  />
                                         <label>Parolă</label>
                                     </div>
                                     <div className="pass">Ați pierdut parola?</div>
                                     {/* <a href='/myroom' > */}
-                                        <input type="button" value="conectare" onClick={() => auth()} />
+                                    <input type="button" value="conectare" onClick={() => auth()}/>  
                                     {/* </a> */}
 
                                     <div className="signup-link">

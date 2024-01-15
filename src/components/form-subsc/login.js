@@ -6,13 +6,51 @@ import google from '../../resources/svg/Google.svg';
 import facebook from '../../resources/svg/Facebook.svg';
 import './../modal/modal.css'
 
+
 const LoginBtn = () => {
     const [modalActive, setModalActive] = useState(false)
+
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        rassword: ''
+    })
+
+    const [errors, setErrors] = useState({})
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData, [name]: value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const validationErrors = {}
+        if (!formData.username.trim()) {
+            validationErrors.username = 'username is required'
+        }
+        if (!formData.email.trim()) {
+            validationErrors.email = 'email is required'
+        } else if (!/\S+@\S+\.\S+/.text(formData.email)) { validationErrors.email = 'email is not valid' }
+
+        if (!formData.password.trim()) {
+            validationErrors.password = 'password is required'
+        } else if (!(formData.password.length < 6)) { validationErrors.password = 'password shhould be at least 6 char' }
+
+        setErrors(validationErrors)
+
+        if (Object.keys(validationErrors).length === 0) {
+            alert("Form Submitted successfully")
+        }
+    }
 
     return (
         <>
             <button onClick={() => setModalActive(true)} className="btn-registr">
-                conectare
+                conectareg
             </button>
             <Modal active={modalActive} setActive={setModalActive}>
                 <div className="login-place">
@@ -20,13 +58,16 @@ const LoginBtn = () => {
 
                         <div className="form-to-fill">
                             <h1>Log in</h1>
-                            <form method="post">
+                            <form onSubmit={handleSubmit} method="post">
                                 <div className="txt-field">
-                                    <input type="text" required />
+                                    {errors.email && <span>{errors.email}</span>}
+                                    <input onChange={handleChange} name='email' type="text" required />
                                     <label>Nume de utilizator sau email</label>
                                 </div>
                                 <div className="txt-field">
-                                    <input type="password" required />
+                                    {errors.password && <span>{errors.password}</span>}
+
+                                    <input onChange={handleChange} name='password' type="password" required />
                                     <label>Parolă</label>
                                 </div>
                                 <div className="pass">Ați pierdut parola?</div>
