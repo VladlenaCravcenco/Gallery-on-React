@@ -9,40 +9,17 @@ import axiosFetch from "../../helpers/axios"
 import { AUTH } from "../../helpers/constants"
 import { Navigate } from 'react-router-dom'
 import { isEmailValid } from "../../helpers/constants/functions"
+import { menu } from "../../helpers/constants/data-array"
 
 const HeaderBlock = () => {
     const [nav, setNav] = useState(false);
     const [modalActive, setModalActive] = useState(false)
     const [redirect, setRedirect] = useState(false)
-
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-
-    const newMenuArr = [
-        {
-            label: "despre noi",
-            link: "/desprenoi"
-        },
-        {
-            label: "evenimente",
-            link: "/evenimente"
-        },
-        {
-            label: "licitaţie",
-            link: "/licitatie"
-        },
-        {
-            label: "artiștii",
-            link: "/artistii"
-        },
-        {
-            label: "contacte",
-            link: "/contacte"
-        },
-    ]
+    const [formData, setFormData] = useState({ email: '', password: '' })
+    const [errors, setErrors] = useState({})
 
     const renderMenuItems = () => {
-        const content = newMenuArr.map(({ link, label }) => {
+        const content = menu.map(({ link, label }) => {
             //item // вот тут у нас наш объект в цилк
             // const {link, label } = item
             return (
@@ -54,30 +31,19 @@ const HeaderBlock = () => {
 
     const auth = () => {
 
-        const formData = new FormData()
+        const fd = new fd()
+        fd.append("email", formData.email)
+        fd.append("password", formData.password)
 
-        formData.append("email", email)
-        formData.append("password", password)
-
-        axiosFetch(AUTH, formData).then(action => {
-            console.log("action", action)
+        axiosFetch(AUTH, fd).then(action => {
             setRedirect(true)
         })
-
     }
-
-    const [formData, setFormData] = useState({
-        email: '',
-        rassword: ''
-    })
-
-    const [errors, setErrors] = useState({})
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-            ...formData, 
+            ...formData,
             [name]: value
         })
         setErrors({})
