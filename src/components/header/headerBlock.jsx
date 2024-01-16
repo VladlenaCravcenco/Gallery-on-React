@@ -7,7 +7,8 @@ import google from '../../resources/svg/Google.svg';
 import facebook from '../../resources/svg/Facebook.svg';
 import axiosFetch from "../../helpers/axios"
 import { AUTH } from "../../helpers/constants"
-import { Navigate  } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
+import { isEmailValid } from "../../helpers/constants/functions"
 
 const HeaderBlock = () => {
     const [nav, setNav] = useState(false);
@@ -76,33 +77,40 @@ const HeaderBlock = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-            ...formData, [name]: value
+            ...formData, 
+            [name]: value
         })
+        setErrors({})
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const { email, password } = formData
         const validationErrors = {}
-        if (!formData.email.trim()) {
+
+        if (!email) {
             validationErrors.email = 'email is required'
-        } else if (!/\S+@\S+\.\S+/.text(formData.email))
-         { validationErrors.email = 'email is not valid' }
+        } else if (!isEmailValid(email)) {
+            validationErrors.email = 'email is not valid'
+        }
 
-         if (!formData.password.trim()) {
+        if (!password) {
             validationErrors.password = 'password is required'
-        } else if (!(formData.password.length < 6))
-         { validationErrors.password = 'password shhould be at least 6 char' }
+        } else if (password.length < 6) {
+            validationErrors.password = 'password shhould be at least 6 char'
+        }
 
-         setErrors(validationErrors)
+        setErrors(validationErrors)
 
-         if(Object.keys(validationErrors).length === 0) {
-            alert("Form Submitted successfully") 
-         }
+        if (Object.keys(validationErrors).length === 0) {
+            alert("Form Submitted successfully")
+            auth()
+        }
     }
 
     return (
         <header className={`navbar ${nav && 'pos-absolute'}`}>
-            {redirect && <Navigate  to="/myroom" />}
+            {redirect && <Navigate to="/myroom" />}
             <a href="/" className='head-logo'>GALLERY SENTIMENT</a>
 
             <nav>
@@ -122,18 +130,18 @@ const HeaderBlock = () => {
                                 <h1>Log in</h1>
                                 <form onSubmit={handleSubmit} method="post">
                                     <div className="txt-field">
-                                    {errors.email && <span>{errors.email}</span>}
-                                        <input onChange={handleChange} value={email} type="email" required />
+                                        {errors.email && <span>{errors.email}</span>}
+                                        <input onChange={handleChange} value={formData.email} name="email" type="text" />
                                         <label>Nume de utilizator sau email</label>
                                     </div>
                                     <div className="txt-field">
-                                    {errors.password && <span>{errors.password}</span>}
-                                        <input onChange={handleChange} value={password} type="password" required  />
+                                        {errors.password && <span>{errors.password}</span>}
+                                        <input onChange={handleChange} value={formData.password} name="password" type="password" />
                                         <label>Parolă</label>
                                     </div>
                                     <div className="pass">Ați pierdut parola?</div>
                                     {/* <a href='/myroom' > */}
-                                    <input type="button" value="conectare" onClick={() => auth()}/>  
+                                    <input type="submit" value="conectare" />
                                     {/* </a> */}
 
                                     <div className="signup-link">

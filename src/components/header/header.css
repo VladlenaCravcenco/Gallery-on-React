@@ -21,7 +21,10 @@
     padding: 1rem;
 
 }
-
+.txt-field span{
+    color: #ff0000;
+    font-weight: 700;
+}
 .nav a {
     font-size: .8rem;
     color: #181F22;
