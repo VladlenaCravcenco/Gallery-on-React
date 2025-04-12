@@ -39,6 +39,14 @@
     text-transform: uppercase;
 
 }
+.nav-btn {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
 
 
 

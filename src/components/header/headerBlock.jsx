@@ -1,21 +1,16 @@
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./header.css";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Modal from "../modal/modal";
 import apple from "../../resources/svg/Apple.svg";
 import google from "../../resources/svg/Google.svg";
 import facebook from "../../resources/svg/Facebook.svg";
-import { useNavigate } from 'react-router-dom';
 
 const HeaderBlock = () => {
   const navigate = useNavigate();
+  const [nav, setNav] = useState(false); // для бургер-меню
+  const [modalActive, setModalActive] = useState(false); // для модалки
 
   const newMenuArr = [
     { label: "despre noi", path: "desprenoi" },
@@ -27,6 +22,12 @@ const HeaderBlock = () => {
 
   const handleNavClick = (path) => {
     navigate(path, { replace: true });
+    setNav(false); // Закрыть бургер
+  };
+
+  const handleLogoClick = () => {
+    navigate("/", { replace: true });
+    setNav(false);
   };
 
   const renderMenuItems = () => {
@@ -39,25 +40,24 @@ const HeaderBlock = () => {
     ));
   };
 
-  const handleLogoClick = () => {
-    navigate('/', { replace: true });
-  };
-
   return (
-    <header className="navbar">
+    <header className={`navbar ${nav ? "pos-absolute" : ""}`}>
       <a onClick={handleLogoClick} className="head-logo">
         GALLERY SENTIMENT
       </a>
+
       <nav>
-        <ul className="menu">
+        <ul className={`menu ${nav ? "active" : ""}`}>
           {renderMenuItems()}
         </ul>
       </nav>
+
       <div className="right-nav">
         <input type="search" name="search" />
-        <a className="btn-conectare" onClick={() => setModalActive(true)}>
+        <button className="btn-conectare" onClick={() => setModalActive(true)}>
           conectare
-        </a>
+        </button>
+
         <Modal id="signup" active={modalActive} setActive={setModalActive}>
           <div className="login-place">
             <div className="log-container">
@@ -73,26 +73,28 @@ const HeaderBlock = () => {
                     <label>Parolă</label>
                   </div>
                   <div className="pass">Ați pierdut parola?</div>
-                  <Link to="myroom">
-                    <input type="submit" value="conectare" />
-                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      navigate("myroom", { replace: true });
+                      setModalActive(false);
+                    }}
+                  >
+                    conectare
+                  </button>
 
                   <div className="signup-link">
-                    Don't have an account?{" "}
-                    <a href="signup">Creează un cont nou</a>
+                    Don't have an account? <a href="#">Creează un cont nou</a>
                   </div>
 
                   <div className="variante">
                     <div className="cuApple">
-                      {" "}
                       <img src={apple} alt="" /> Continuă cu Apple
                     </div>
                     <div className="google">
-                      {" "}
                       <img src={google} alt="" /> Continuă cu Google
                     </div>
                     <div className="facebook">
-                      {" "}
                       <img src={facebook} alt="" /> Continuă cu Facebook
                     </div>
                   </div>
@@ -109,4 +111,5 @@ const HeaderBlock = () => {
     </header>
   );
 };
+
 export default HeaderBlock;
