@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '../../supabaseClient';
 import Modal from '../../components/modal/modal';
-import work4 from '../../resources/works/work4.jpg';
 import heartEmpty from '../../resources/svg/heart-empty.svg';
 import './../modal/modal.css';
 import './../Myroomheader/myroomstyle.css';
@@ -12,6 +11,24 @@ const MenuAdd = () => {
   const [price, setPrice] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [uploading, setUploading] = useState(false);
+  const [artworks, setArtworks] = useState([]);
+
+  const fetchArtworks = async () => {
+    const { data, error } = await supabase
+      .from('artworks')
+      .select('*')
+      .order('id', { ascending: false });
+
+    if (error) {
+      console.error('Ошибка загрузки картин:', error);
+    } else {
+      setArtworks(data);
+    }
+  };
+
+  useEffect(() => {
+    fetchArtworks();
+  }, []);
 
   const handleUpload = async () => {
     setUploading(true);
@@ -30,7 +47,7 @@ const MenuAdd = () => {
     }
 
     const fileName = `${Date.now()}-${imageFile.name}`;
-    const { data: fileData, error: fileError } = await supabase
+    const { error: fileError } = await supabase
       .storage
       .from('artworks')
       .upload(fileName, imageFile);
@@ -58,6 +75,7 @@ const MenuAdd = () => {
       setPrice('');
       setImageFile(null);
       setModalActive(false);
+      await fetchArtworks();
     }
 
     setUploading(false);
@@ -74,7 +92,7 @@ const MenuAdd = () => {
             <div className="tittle">Urmări</div>
           </div>
 
-          <div className='lucruri-set'>
+          <div className="lucruri-set">
             <div className="adaugare">
               <button type='submit' onClick={() => setModalActive(true)}>Adăugare</button>
               <Modal active={modalActive} setActive={setModalActive}>
@@ -85,40 +103,33 @@ const MenuAdd = () => {
                   <input type='file' onChange={e => setImageFile(e.target.files[0])} />
                 </div>
                 <button onClick={handleUpload} disabled={uploading}>
-                  {uploading ? 'Загрузка...' : 'Adăuga'}
+                  {uploading ? 'Zăncărcare...' : 'Adăuga'}
                 </button>
               </Modal>
             </div>
 
             <div className="grid_adaugari">
               <div className='adaugat'>
-                <div className="add_xcard_2">
-                  <div className="photo_x"><img src={work4} alt="" /></div>
-                  <div className="nume_x">
-                    <div className="x-name">
-                      <div className="numePrenume">Nume prenume</div>
-                      <div className="like_x"><img src={heartEmpty} alt="" /></div>
+                {artworks.map(({ id, title, price, image_url }) => (
+                  <div className="add_xcard" key={id}>
+                    <div className="photo_x">
+                      <img src={image_url} alt={title} />
                     </div>
-                    <div className="denumirea">Denumirea</div>
-                    <div className="xprice">€10,000</div>
-                  </div>
-                </div>
-
-                <div className="add_xcard_3">
-                  <div className="photo_x"><img src={work4} alt="" /></div>
-                  <div className="nume_x">
-                    <div className="x-name">
-                      <div className="numePrenume">Nume prenume</div>
-                      <div className="like_x"><img src={heartEmpty} alt="" /></div>
+                    <div className="nume_x">
+                      <div className="x-name">
+                        <div className="numePrenume">Nume prenume</div>
+                        <div className="like_x">
+                          <img src={heartEmpty} alt="heart" />
+                        </div>
+                      </div>
+                      <div className="denumirea">{title}</div>
+                      <div className="xprice">€{price}</div>
                     </div>
-                    <div className="denumirea">Denumirea</div>
-                    <div className="xprice">€10,000</div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
