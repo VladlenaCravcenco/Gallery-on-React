@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import HeaderBlock from '../header/headerBlock';
 import Myroomheader from '../Myroomheader/Myroomheader.js';
 import MenuAdd from '../Myroomheader/menu-add.js';
-import UploadArtwork from '../UploadArtwork.jsx'; // 👈 добавляем
+import UserArtworks from '../UserArtworks.jsx'; // вместо UploadArtwork
 
 import FooterBlock from '../footer/footer.js';
 
@@ -16,7 +16,7 @@ export default class MyRoom extends Component {
         <MenuAdd />
 
         <div style={{ padding: '2rem 0' }}>
-          <UploadArtwork /> {/* 👈 форма загрузки */}
+        <UserArtworks /> {/* 👈 форма загрузки */}
         </div>
 
         <FooterBlock />
