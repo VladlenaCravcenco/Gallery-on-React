@@ -30,6 +30,7 @@
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "test": "react-scripts test",
+  "deploy-clean": "npm run build && rm -rf docs && cp -r build docs && git add . && git commit -m \"🚀 Автодеплой: свежая сборка\" && git push origin main",
   "eject": "react-scripts eject"
 },
   "eslintConfig": {
