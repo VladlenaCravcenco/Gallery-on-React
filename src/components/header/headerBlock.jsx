@@ -21,8 +21,8 @@ const HeaderBlock = () => {
   ];
 
   const handleNavClick = (path) => {
-    navigate(path, { replace: true });
-    setNav(false); // Закрыть бургер
+    navigate(`/${path}`, { replace: true });
+    setNav(false);
   };
 
   const handleLogoClick = () => {
@@ -76,7 +76,7 @@ const HeaderBlock = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      navigate("myroom", { replace: true });
+                      navigate("/myroom", { replace: true });
                       setModalActive(false);
                     }}
                   >
