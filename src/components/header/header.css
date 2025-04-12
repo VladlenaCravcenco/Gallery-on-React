@@ -51,6 +51,12 @@
 
 }
 
+nav ul li .active {
+    color: #f55;
+    font-weight: bold;
+    border-bottom: 2px solid #f55;
+  }
+
 
 
 .right-nav {

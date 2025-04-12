@@ -1,4 +1,6 @@
 import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './header.css';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch, AiOutlineUser } from 'react-icons/ai'
 import Modal from '../modal/modal'
@@ -10,38 +12,25 @@ const HeaderBlock = () => {
     const [modalActive, setModalActive] = useState(false)
 
     const newMenuArr = [
-        {
-            label: "despre noi",
-            link: "#/desprenoi"
-        },
-        {
-            label: "evenimente",
-            link: "#/evenimente"
-        },
-        {
-            label: "licitaţie",
-            link: "#/licitatie"
-        },
-        {
-            label: "artiștii",
-            link: "#/artistii"
-        },
-        {
-            label: "contacte",
-            link: "#/contacte"
-        },
-    ]
+        { label: "despre noi", link: "/desprenoi" },
+        { label: "evenimente", link: "/evenimente" },
+        { label: "licitaţie", link: "/licitatie" },
+        { label: "artiștii", link: "/artistii" },
+        { label: "contacte", link: "/contacte" },
+      ];
 
-    const renderMenuItems = () => {
-        const content = newMenuArr.map(({ link, label }) => {
-            //item // вот тут у нас наш объект в цилк
-            // const {link, label } = item
-            return (
-                <li key={label}><a href={link}>{label}</a></li>
-            )
-        })
-        return content
-    }
+      const renderMenuItems = () => {
+        return newMenuArr.map(({ link, label }) => (
+          <li key={label}>
+            <NavLink
+              to={link}
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              {label}
+            </NavLink>
+          </li>
+        ));
+      };
     return (
         <header className={`navbar ${nav && 'pos-absolute'}`}>
             <a href="/" className='head-logo'>GALLERY SENTIMENT</a>
