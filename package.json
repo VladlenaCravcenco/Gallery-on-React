@@ -25,21 +25,18 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-"build": "react-scripts build && mv build docs",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  "test": "react-scripts test",
-  "deploy-clean": "npm run build && rm -rf docs && cp -r build docs && git add . && git commit -m \"🚀 Автодеплой: свежая сборка\" && git push origin main",
-  "eject": "react-scripts eject"
-},
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy-clean": "npm run build && rm -rf docs && cp -r build docs && git add . && git commit -m \"🚀 Автодеплой: свежая сборка\" && git push origin main",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
