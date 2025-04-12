@@ -15,6 +15,7 @@ function App() {
   return (
     <HashRouter>
       <div className="App">
+        <HeaderBlock /> {/* <-- ОБЯЗАТЕЛЬНО здесь */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
