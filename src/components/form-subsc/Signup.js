@@ -14,11 +14,15 @@ const SignupBtn = () => {
 
   const handleSignup = async () => {
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
+    console.log("📤 Отправка запроса на регистрацию:", email);
+  
+    const { data, error } = await supabase.auth.signUp({
       email,
       password
     });
-
+  
+    console.log("📥 Ответ Supabase:", data, error);
+  
     if (error) {
       alert('Eroare la înregistrare: ' + error.message);
     } else {
@@ -27,10 +31,11 @@ const SignupBtn = () => {
       setEmail('');
       setPassword('');
     }
-
+  
     setLoading(false);
   };
 
+  
   return (
     <>
       <button id='login' className="btn-registr" onClick={() => setModalActive(true)}>
@@ -61,9 +66,13 @@ const SignupBtn = () => {
                 />
               </div>
               <div className="subtext">Parola trebuie să aibă cel puțin 8 caractere și să includă o literă minusculă, literă mare și o cifră.</div>
-              <div className="button_registra" onClick={handleSignup}>
+              <button
+                className="button_registra"
+                onClick={handleSignup}
+                disabled={loading}
+              >
                 {loading ? 'Se înregistrează...' : 'Înregistrează'}
-              </div>
+              </button>
             </div>
 
             <div className='signup_boxr'>
