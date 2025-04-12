@@ -12,38 +12,46 @@ import Modal from "../modal/modal";
 import apple from "../../resources/svg/Apple.svg";
 import google from "../../resources/svg/Google.svg";
 import facebook from "../../resources/svg/Facebook.svg";
+import { useNavigate } from 'react-router-dom';
+
 const HeaderBlock = () => {
-  const [nav, setNav] = useState(false);
-  const [modalActive, setModalActive] = useState(false);
+  const navigate = useNavigate();
 
   const newMenuArr = [
-    { label: "despre noi", link: "desprenoi" },
-    { label: "evenimente", link: "evenimente" },
-    { label: "licitaţie", link: "licitatie" },
-    { label: "artiștii", link: "artistii" },
-    { label: "contacte", link: "contacte" },
+    { label: "despre noi", path: "desprenoi" },
+    { label: "evenimente", path: "evenimente" },
+    { label: "licitaţie", path: "licitatie" },
+    { label: "artiștii", path: "artistii" },
+    { label: "contacte", path: "contacte" },
   ];
 
+  const handleNavClick = (path) => {
+    navigate(path, { replace: true });
+  };
+
   const renderMenuItems = () => {
-    return newMenuArr.map(({ link, label }) => (
+    return newMenuArr.map(({ label, path }) => (
       <li key={label}>
-        <NavLink
-          to={link}
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
+        <button className="nav-btn" onClick={() => handleNavClick(path)}>
           {label}
-        </NavLink>
+        </button>
       </li>
     ));
   };
+
+  const handleLogoClick = () => {
+    navigate('/', { replace: true });
+  };
+
   return (
-    <header className={`navbar ${nav && "pos-absolute"}`}>
-      <a href="/" className="head-logo">
+    <header className="navbar">
+      <a onClick={handleLogoClick} className="head-logo">
         GALLERY SENTIMENT
       </a>
-
       <nav>
-        <ul className={`menu ${nav && "active"}`}>{renderMenuItems()}</ul>
+        <ul className="menu">
+          {renderMenuItems()}
+        </ul>
       </nav>
       <div className="right-nav">
         <input type="search" name="search" />
