@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Gallery-on-React/static/css/main.00831a31.css",
-    "main.js": "/Gallery-on-React/static/js/main.3baa8fc1.js",
+    "main.css": "/Gallery-on-React/static/css/main.725c76ac.css",
+    "main.js": "/Gallery-on-React/static/js/main.f9086eab.js",
     "static/media/work4.jpg": "/Gallery-on-React/static/media/work4.112d6795b443ad3d4602.jpg",
     "static/media/bg.jpg": "/Gallery-on-React/static/media/bg.e6748eebe39632859863.jpg",
     "static/media/work5.jpg": "/Gallery-on-React/static/media/work5.122bc26a1c58690b9926.jpg",
@@ -49,11 +49,11 @@
     "static/media/send-message-dm.svg": "/Gallery-on-React/static/media/send-message-dm.234b30d1eb768e24713e0e073415ce74.svg",
     "static/media/facebook-empty.svg": "/Gallery-on-React/static/media/facebook-empty.23c5955b88761ae4299eee90a3c4d087.svg",
     "static/media/check-good-yes.svg": "/Gallery-on-React/static/media/check-good-yes.40586f649686f356350305e816e0b2d3.svg",
-    "main.00831a31.css.map": "/Gallery-on-React/static/css/main.00831a31.css.map",
-    "main.3baa8fc1.js.map": "/Gallery-on-React/static/js/main.3baa8fc1.js.map"
+    "main.725c76ac.css.map": "/Gallery-on-React/static/css/main.725c76ac.css.map",
+    "main.f9086eab.js.map": "/Gallery-on-React/static/js/main.f9086eab.js.map"
   },
   "entrypoints": [
-    "static/css/main.00831a31.css",
-    "static/js/main.3baa8fc1.js"
+    "static/css/main.725c76ac.css",
+    "static/js/main.f9086eab.js"
   ]
 }
