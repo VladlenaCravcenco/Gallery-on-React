@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Gallery-on-React/static/css/main.a5d8e0a7.css",
-    "main.js": "/Gallery-on-React/static/js/main.71d864e5.js",
+    "main.js": "/Gallery-on-React/static/js/main.436750d6.js",
     "static/js/289.755c2b88.chunk.js": "/Gallery-on-React/static/js/289.755c2b88.chunk.js",
     "static/media/work4.jpg": "/Gallery-on-React/static/media/work4.112d6795b443ad3d4602.jpg",
     "static/media/bg.jpg": "/Gallery-on-React/static/media/bg.e6748eebe39632859863.jpg",
@@ -51,11 +51,11 @@
     "static/media/facebook-empty.svg": "/Gallery-on-React/static/media/facebook-empty.23c5955b88761ae4299eee90a3c4d087.svg",
     "static/media/check-good-yes.svg": "/Gallery-on-React/static/media/check-good-yes.40586f649686f356350305e816e0b2d3.svg",
     "main.a5d8e0a7.css.map": "/Gallery-on-React/static/css/main.a5d8e0a7.css.map",
-    "main.71d864e5.js.map": "/Gallery-on-React/static/js/main.71d864e5.js.map",
+    "main.436750d6.js.map": "/Gallery-on-React/static/js/main.436750d6.js.map",
     "289.755c2b88.chunk.js.map": "/Gallery-on-React/static/js/289.755c2b88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5d8e0a7.css",
-    "static/js/main.71d864e5.js"
+    "static/js/main.436750d6.js"
   ]
 }
