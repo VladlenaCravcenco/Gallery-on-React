@@ -15,24 +15,28 @@ const LoginBtn = () => {
     const handleLogin = async () => {
         setLoading(true);
         setErrorMessage('');
-
+        console.log("🔐 Пытаемся войти с email:", email);
+      
         const { data, error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
+          email,
+          password,
         });
-
+      
+        console.log("📦 Данные от Supabase:", data);
+        console.log("❌ Ошибка от Supabase:", error);
+      
         if (error) {
-            setErrorMessage('Datele introduse nu sunt corecte. Încearcă din nou.');
+          setErrorMessage('Datele introduse nu sunt corecte. Încearcă din nou.');
         } else {
-            alert('Autentificat cu succes!');
-            setModalActive(false);
-            setEmail('');
-            setPassword('');
-            navigate('/myroom');
+          alert('Autentificat cu succes!');
+          setModalActive(false);
+          setEmail('');
+          setPassword('');
+          navigate('/myroom');
         }
-
+      
         setLoading(false);
-    };
+      };
 
     return (
         <>
