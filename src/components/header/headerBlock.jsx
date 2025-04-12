@@ -12,23 +12,23 @@ const HeaderBlock = () => {
     const newMenuArr = [
         {
             label: "despre noi",
-            link: "/desprenoi"
+            link: "#/desprenoi"
         },
         {
             label: "evenimente",
-            link: "/evenimente"
+            link: "#/evenimente"
         },
         {
             label: "licitaţie",
-            link: "/licitatie"
+            link: "#/licitatie"
         },
         {
             label: "artiștii",
-            link: "/artistii"
+            link: "#/artistii"
         },
         {
             label: "contacte",
-            link: "/contacte"
+            link: "#/contacte"
         },
     ]
 
@@ -71,7 +71,7 @@ const HeaderBlock = () => {
                                         <label>Parolă</label>
                                     </div>
                                     <div className="pass">Ați pierdut parola?</div>
-                                    <a href='/myroom' ><input type="submit" value="conectare" /></a>
+                                    <a href='#/myroom' ><input type="submit" value="conectare" /></a>
 
                                     <div className="signup-link">
                                         Don't have an account? <a href="signup">Creează un cont nou</a>
