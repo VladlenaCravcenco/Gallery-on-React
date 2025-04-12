@@ -1,11 +1,7 @@
-export const SITE_URL = "http://localhost:3000/";
-export const API_URL = 'http://vlada-art.ssv-design.com/Main';
-export const BASE_URL = 'http://vlada-art.ssv-design.com/';
+export const API_URL = "https://your-api.onrender.com/api";
 
-export const NO_IMAGE_URL = BASE_URL + 'uploads/no-image.png';
+export const GET_PRODUCTS_LIST = API_URL + "/gallery";
+export const SET_LIKE = API_URL + "/like";
 
-export const ONE_PRODUCT_EMPTY_DATA = {}
-
-
-export const GET_PRODUCTS_LIST = API_URL + "/getProductsList" 
-export const SET_LIKE = API_URL + "/setLike" 
+export const NO_IMAGE_URL = 'https://via.placeholder.com/300x200';
+export const ONE_PRODUCT_EMPTY_DATA = {};

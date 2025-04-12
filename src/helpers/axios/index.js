@@ -1,14 +1,23 @@
 import axios from 'axios';
 
-async function axiosFetch ( API_URL, formData = {} )  {
-    return await axios.post(API_URL, formData,{
-        headers: {
-            'content-type': 'multipart/form-data',
-        },
-    }).then( res => {
-        return Promise.resolve(res).then(arrList=>{
-            return arrList.data;
-        }) 
-    }); 
+async function axiosFetch(API_URL, data = {}, method = 'POST', isFormData = true) {
+  try {
+    const headers = isFormData
+      ? { 'Content-Type': 'multipart/form-data' }
+      : { 'Content-Type': 'application/json' };
+
+    const response = await axios({
+      url: API_URL,
+      method,
+      data: isFormData ? data : JSON.stringify(data),
+      headers,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("❌ API ошибка:", error);
+    return null;
+  }
 }
+
 export default axiosFetch;
