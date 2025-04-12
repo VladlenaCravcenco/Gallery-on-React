@@ -2,7 +2,7 @@
   "name": "vlada-react-dev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vladlenacravcenco.github.io/Gallery-on-React",
+  "homepage": "https://vladlenacravcenco.github.io/Gallery-on-React/#",
   "dependencies": {
     "@react-spring/web": "^9.7.2",
     "@testing-library/jest-dom": "^5.16.5",
