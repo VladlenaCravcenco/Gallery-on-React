@@ -1,44 +1,32 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 
-import MainPage from './mainpage.js';
-import MyRoom from './myroom.js';
-import RandomProf from './randomprofile.js';
-import Setings from './Setings.js';
-import TablouriPopulare from './tablouri-populare.js';
-import Desprenoi from './desprenoi.js';
-import Evenimente from './evenimente.js';
-import Licitatie from './licitatie.js';
+import MainPage from './mainpage';
+import MyRoom from './myroom';
+import RandomProf from './randomprofile';
+import SettingsPage from './SettingsPage';
+import TablouriPopulare from './TablouriPopularePage';
+import Desprenoi from './desprenoi';
+import Evenimente from './evenimente';
+import Licitatie from './licitatie';
 import Artistii from './artistii';
 import Contacte from './contacte';
 
-import './app.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
-import CookieHelper from "../../helpers/cookie-helper";
-import { setToken } from "../../helpers/constants/functions";
-
 const App = () => {
-  useEffect(() => {
-    const token = CookieHelper("get", "token");
-    const generateToken = setToken();
-
-    if (!token) {
-      CookieHelper("set", "token", generateToken);
-    }
-  }, []);
-
   return (
     <HashRouter>
       <Routes>
-        <Route path='/' Component={MainPage} />
-        <Route path='/myroom' Component={MyRoom} />
-        <Route path='/random' Component={RandomProf} />
-        <Route path='/setings' Component={Setings} />
-        <Route path='/tablouripopulare' Component={TablouriPopulare} />
-        <Route path='/desprenoi' Component={Desprenoi} />
-        <Route path='/evenimente' Component={Evenimente} />
-        <Route path='/licitatie' Component={Licitatie} />
-        <Route path='/artistii' Component={Artistii} />
-        <Route path='/contacte' Component={Contacte} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/myroom" element={<MyRoom />} />
+        <Route path="/random" element={<RandomProf />} />
+        <Route path="/setings" element={<SettingsPage />} />
+        <Route path="/tablouripopulare" element={<TablouriPopulare />} />
+        <Route path="/desprenoi" element={<Desprenoi />} />
+        <Route path="/evenimente" element={<Evenimente />} />
+        <Route path="/licitatie" element={<Licitatie />} />
+        <Route path="/artistii" element={<Artistii />} />
+        <Route path="/contacte" element={<Contacte />} />
       </Routes>
     </HashRouter>
   );
